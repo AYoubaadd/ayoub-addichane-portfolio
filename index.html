@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <title>Ayoub Addichane | Ingénieur IA & Génie Informatique</title>
+
+    <meta
+    name="description"
+    content="Portfolio d'Ayoub Addichane, Ingénieur d'État en Génie Informatique spécialisé en Intelligence Artificielle, Machine Learning, Deep Learning, Computer Vision, OCR et IA Générative (LLM & RAG)."
+    />
+
+    <meta name="author" content="Ayoub Addichane" />
+
+    <meta
+    name="keywords"
+    content="Ayoub Addichane, Ingénieur IA, Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, OCR, Generative AI, LLM, RAG, Python, PyTorch, TensorFlow"
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / LinkedIn / Facebook -->
+    <meta property="og:title" content="Ayoub Addichane | AI Engineer & Software Engineer" />
+    <meta
+    property="og:description"
+    content="Découvrez le portfolio d'Ayoub Addichane : projets en Intelligence Artificielle, Machine Learning, Deep Learning, Computer Vision et IA Générative."
+    />
+
+    
+    <meta property="og:type" content="website" />
+    <meta
+        property="og:image"
+        content="https://i.postimg.cc/Jz6xHYbQ/ingolfur.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+  
+    <!-- mobile specific metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        try {
+            const savedTheme = localStorage.getItem('portfolio-theme');
+            if (savedTheme === 'dark' || savedTheme === 'light') document.documentElement.dataset.theme = savedTheme;
+        } catch (error) {}
+    </script>
+
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css?v=portfolio-redesign-14">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/projects-gallery.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top">
+
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="spinner" id="spinner"></div>
+    </div>
+
+    <!-- header -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a href="index.html" aria-label="AYOUB ADDICHANE, accueil" data-i18n-aria-label="homeBrand">
+                <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 493 511.69"><path fill-rule="nonzero" d="M6.99 0h314.2v154.84H0V0h6.99zm345.75 356.85H493v154.84H345.75V356.85h6.99zm126.29 13.97H359.72v126.9h119.31v-126.9zM6.99 356.85h314.2v154.84H0V356.85h6.99zm300.23 13.97H13.97v126.9h293.25v-126.9zM133.28 192.39H13.97V319.3h119.31V192.39zM6.99 178.42h140.26v154.85H0V178.42h6.99zm472.04 13.97H185.78V319.3h293.25V192.39zM178.8 178.42H493v154.85H171.82V178.42h6.98zM352.74 0H493v154.84H345.75V0h6.99zm126.29 13.97H359.72v126.9h119.31V13.97zm-171.81 0H13.97v126.9h293.25V13.97z"/></svg>
+            </a>
+        </div>
+
+        <div class="header-content" id="header-content">
+    
+            <nav class="row header-nav-wrap redesign-navigation" aria-label="Navigation principale" data-i18n-aria-label="mainNavigation">
+                <ul class="header-nav">
+                    <li><a class="smoothscroll active-link" href="#hero" data-i18n="navHome">Accueil</a></li>
+                    <li><a class="smoothscroll" href="#about" data-i18n="navAbout">À propos</a></li>
+                    <li><a class="smoothscroll" href="#skills" data-i18n="navSkills">Compétences</a></li>
+                    <li><a class="smoothscroll" href="#projects" data-i18n="navProjects">Projets</a></li>
+                    <li><a class="smoothscroll" href="#certificates" data-i18n="navCertificates">Certificats</a></li>
+                    <li><a class="smoothscroll" href="#journal" data-i18n="navJournal">Journal</a></li>
+                    <li><a class="smoothscroll" href="#life" data-i18n="navLife">Formations</a></li>
+                    <li><a class="smoothscroll" href="#contact" data-i18n="navContact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-controls" aria-label="Préférences du site">
+                <div class="language-switch" role="group" aria-label="Langue">
+                    <button type="button" data-language="fr" aria-pressed="true">FR</button>
+                    <button type="button" data-language="en" aria-pressed="false">EN</button>
+                </div>
+                <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                    <span aria-hidden="true" data-theme-icon>☾</span>
+                    <span data-theme-label>Mode sombre</span>
+                </button>
+            </div>
+
+            <nav class="row header-nav-wrap legacy-navigation">
+                <ul class="header-nav">
+                    <li><a class="smoothscroll active-link" href="#hero" title="Intro">Home</a></li>
+                    <li><a class="smoothscroll" href="#about" title="About">À Propos</a></li>
+                    <li><a class="smoothscroll" href="#skills" title="Skills">Compétences</a></li>
+                    <li><a class="smoothscroll" href="#projects" title="Works">Projects</a></li>
+                    <li><a class="smoothscroll" href="#certificates" title="Certificates">Certificats</a></li>
+                    <li><a class="smoothscroll" href="#journal" title="Journal">Journal</a></li>
+                    <li><a class="smoothscroll" href="#life" title="life">Formations</a></li>
+                    <li><a class="smoothscroll" href="#contact" title="Contact us">Contact Me</a></li>
+
+                </ul>
+            </nav>
+
+            <a href="CV_Ayoub_Addichane_Ingénieur_IA.pdf" download data-cv-download class="btn btn--stroke btn--small">Download CV</a>
+
+        </div>
+
+        <button class="header-menu-toggle" type="button" aria-expanded="false" aria-controls="header-content">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+            <span class="sr-only" data-i18n="menuLabel">Menu</span>
+        </button>
+
+    </header> 
+
+    <!-- hero -->
+    <section id="hero" class="s-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="row hero-content">
+
+            <div class="column large-full">
+
+                <p class="hero-kicker" data-i18n="heroKicker">Ingénieur en intelligence artificielle · Maroc</p>
+                <h1 data-i18n="heroTitle">Je construis des systèmes intelligents qui servent le réel.</h1>
+                <p class="hero-summary" data-i18n="heroSummary">Ayoub Addichane — Ingénieur Informatique | Intelligence Artificielle, Machine Learning, Computer Vision & IA Générative | Développement de solutions intelligentes.</p>
+                <div class="hero-actions">
+                    <a class="hero-link hero-link--primary smoothscroll" href="#projects" data-i18n="heroProjects">Découvrir les projets</a>
+                    <a class="hero-link smoothscroll" href="#about" data-i18n="heroJourney">Mon parcours</a>
+                    <a class="hero-link" href="CV_Ayoub_Addichane_Ing%C3%A9nieur_IA.pdf" download data-cv-download data-i18n="heroCv">Télécharger mon CV</a>
+                </div>
+
+                <aside class="hero-visual profile-carousel" role="group" aria-label="Photos de profil">
+                    <img class="is-active" src="images/Mes photo/tswir inw.jpeg" alt="Ayoub Addichane, photo de profil 1" />
+                    <img src="images/Mes photo/tswir inw2.jpeg" alt="Ayoub Addichane, photo de profil 2" aria-hidden="true" />
+                    <img src="images/Mes photo/tswir inw3.jpeg" alt="Ayoub Addichane, photo de profil 3" aria-hidden="true" />
+                    <button style="display: none;" class="profile-carousel__toggle"  aria-label="Mettre en pause le défilement des photos"  ></button>
+                </aside>
+
+                <ul class="hero-social">
+                    <li>
+                        <a href="https://www.linkedin.com/in/ayoub-addichane" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px">    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px">    <path d="M22,3.999c-0.78,0.463-2.345,1.094-3.265,1.276c-0.027,0.007-0.049,0.016-0.075,0.023c-0.813-0.802-1.927-1.299-3.16-1.299 c-2.485,0-4.5,2.015-4.5,4.5c0,0.131-0.011,0.372,0,0.5c-3.353,0-5.905-1.756-7.735-4c-0.199,0.5-0.286,1.29-0.286,2.032 c0,1.401,1.095,2.777,2.8,3.63c-0.314,0.081-0.66,0.139-1.02,0.139c-0.581,0-1.196-0.153-1.759-0.617c0,0.017,0,0.033,0,0.051 c0,1.958,2.078,3.291,3.926,3.662c-0.375,0.221-1.131,0.243-1.5,0.243c-0.26,0-1.18-0.119-1.426-0.165 c0.514,1.605,2.368,2.507,4.135,2.539c-1.382,1.084-2.341,1.486-5.171,1.486H2C3.788,19.145,6.065,20,8.347,20 C15.777,20,20,14.337,20,8.999c0-0.086-0.002-0.266-0.005-0.447C19.995,8.534,20,8.517,20,8.499c0-0.027-0.008-0.053-0.008-0.08 c-0.003-0.136-0.006-0.263-0.009-0.329c0.79-0.57,1.475-1.281,2.017-2.091c-0.725,0.322-1.503,0.538-2.32,0.636 C20.514,6.135,21.699,4.943,22,3.999z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px">    <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#0">
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px">    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h7.621v-6.961h-2.343v-2.725h2.343V9.309 c0-2.324,1.421-3.591,3.495-3.591c0.699-0.002,1.397,0.034,2.092,0.105v2.43h-1.428c-1.13,0-1.35,0.534-1.35,1.322v1.735h2.7 l-0.351,2.725h-2.365V21H19c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z"/></svg>
+                        </a>
+                    </li>
+                </ul>
+
+            </div> 
+
+        </div>
+
+    </section>
+
+    <section id="about-placeholder" class="target-section">
+        <div class="row"><div class="column large-full"><h2>À Propos</h2></div></div>
+
+    </section>
+
+    <section id="skills-placeholder" class="target-section">
+        <div class="row"><div class="column large-full"><h2>Compétences</h2></div></div>
+
+    </section>
+
+    <!-- portfolio -->
+    <section id="portfolio-preview" class="s-portfolio target-section">
+        
+        <div class="row s-portfolio__header">
+            <div class="column large-6 medium-8 tab-full">
+                <div class="section-intro" data-aos="fade-up">
+                    <h1 class="display-1">
+                        Portfolio
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
+
+            <div class="column card" data-aos="fade-up" v-for="(portfolio, index) in portfolios" :key="index">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <div class="folio-item__thumb-link">
+                            <img :src="portfolio.imgLink" alt="">
+                        </div>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">{{ portfolio.techStack }}</div>
+                        <h4 class="folio-item__title">{{ portfolio.title }}</h4>
+                    </div>
+                    <div class="folio-item__project-link">
+                        <a :href="portfolio.githubLink" title="GitHub Link" >GitHub Link</a>
+                        |
+                        <a :href="portfolio.projectLink" title="Project Link">Project Link</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
+    <section id="about" class="target-section content-section">
+        <div class="row">
+            <div class="column large-full">
+                <header class="about-heading">
+                    <p class="section-eyebrow" data-i18n="aboutEyebrow">Profil professionnel</p>
+                    <h2 data-i18n="aboutTitle">À propos</h2>
+                    <p class="about-lead" data-i18n="aboutLead">Ingénieur en informatique, je conçois des solutions numériques qui relient intelligence artificielle et besoins réels.</p>
+                </header>
+
+                <div class="about-layout">
+                    <div class="about-story">
+                        <p data-i18n="aboutStoryOne">
+                            Je m'appelle Ayoub Addichane. Diplômé en génie informatique, je m'intéresse
+                            à l'intelligence artificielle appliquée, à la vision par ordinateur et au développement
+                            d'applications Full Stack.
+                        </p>
+                        <p data-i18n="aboutStoryTwo">
+                            J'ai contribué à des projets mêlant modèles d'IA, applications web et cloud. Je continue
+                            d'explorer les LLM, le RAG et les agents intelligents, avec une approche centrée sur des
+                            solutions utiles, fiables et pensées pour leurs utilisateurs.
+                        </p>
+                        <div class="about-actions">
+                            <a class="about-action about-action--primary smoothscroll" href="#skills" data-i18n="aboutSkillsLink">Découvrir mes compétences</a>
+                        </div>
+                    </div>
+
+                    <aside class="about-profile" aria-label="Domaines d'expertise et langues" data-i18n-aria-label="aboutProfileLabel">
+                        <div class="about-profile__section">
+                            <h3 data-i18n="aboutFocusTitle">Domaines d'intérêt</h3>
+                            <ul class="about-focus-list">
+                                <li><span class="about-focus-list__number">01</span><span data-i18n="aboutFocusAi">Intelligence artificielle appliquée</span></li>
+                                <li><span class="about-focus-list__number">02</span><span data-i18n="aboutFocusFullStack">Développement Full Stack</span></li>
+                                <li><span class="about-focus-list__number">03</span><span data-i18n="aboutFocusCloud">Cloud et ingénierie des données</span></li>
+                            </ul>
+                        </div>
+                        <div class="about-profile__section about-languages">
+                            <h3 data-i18n="aboutLanguagesTitle">Langues</h3>
+                            <ul class="about-language-list">
+                                <li><span data-i18n="aboutLanguageFrench">Français</span><span data-i18n="aboutLevelProfessional">Professionnel</span></li>
+                                <li><span data-i18n="aboutLanguageEnglish">Anglais</span><span data-i18n="aboutLevelProfessional">Professionnel</span></li>
+                                <li><span data-i18n="aboutLanguageArabic">Arabe</span><span data-i18n="aboutLevelNative">Langue maternelle</span></li>
+                                <li><span data-i18n="aboutLanguageTamazight">Tamazight</span><span data-i18n="aboutLevelNative">Langue maternelle</span></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="target-section content-section">
+        <div class="row">
+            <div class="column large-full">
+                <header class="skills-heading">
+                    <div>
+                        <p class="section-eyebrow" data-i18n="skillsEyebrow">Expertise technique</p>
+                        <h2 data-i18n="skillsTitle">Compétences</h2>
+                    </div>
+                    <p class="skills-intro" data-i18n="skillsIntro">Des compétences combinées en intelligence artificielle, ingénierie logicielle et travail en équipe.</p>
+                </header>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <div class="skill-card__top"><span class="skill-card__category">IA</span><span class="skill-card__number">01</span></div>
+                        <h3>Intelligence artificielle & Machine Learning</h3>
+                        <p>Python, NumPy, Pandas, Scikit-learn, TensorFlow, Keras, PyTorch, Machine Learning, Deep Learning, régression, classification, clustering, feature engineering, optimisation d'hyperparamètres, Random Forest, XGBoost, SVM, KNN, PCA et Naive Bayes.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-card__top"><span class="skill-card__category">GenAI</span><span class="skill-card__number">02</span></div>
+                        <h3>IA générative, LLM & RAG</h3>
+                        <p>Large Language Models, Generative AI, Retrieval-Augmented Generation, prompt engineering, embeddings, recherche sémantique, chunking, recherche vectorielle, LangChain, Hugging Face, FAISS, ChromaDB, intégration d'API LLM et chatbots intelligents.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-card__top"><span class="skill-card__category">Vision</span><span class="skill-card__number">03</span></div>
+                        <h3>Computer Vision & Traitement d'images</h3>
+                        <p>OpenCV, OpenSlide, Tesseract OCR, classification d'images, extraction de patches, analyse d'images médicales, Whole Slide Images, contrôle qualité automatique, fine-tuning de ResNet-50, heatmaps et analyse des résultats.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-card__top"><span class="skill-card__category">Full Stack</span><span class="skill-card__number">04</span></div>
+                        <h3>Développement Web Full Stack</h3>
+                        <p>C#, ASP.NET Core, Entity Framework, React.js, Next.js, NestJS, Laravel, Flask, FastAPI, PHP, HTML5, CSS3, JavaScript, TypeScript, Tailwind CSS, Bootstrap, API REST, JWT et architecture MVC.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-card__top"><span class="skill-card__category">Code</span><span class="skill-card__number">05</span></div>
+                        <h3>Langages de programmation</h3>
+                        <p>Python, C#, Java, C, C++, JavaScript, TypeScript, PHP, SQL et programmation orientée objet.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-card__top"><span class="skill-card__category">Data</span><span class="skill-card__number">06</span></div>
+                        <h3>Bases de données & Ingénierie des données</h3>
+                        <p>PostgreSQL, MySQL, Microsoft SQL Server, Oracle Database, MongoDB, modélisation, SQL avancé, nettoyage des données, prétraitement et préparation de datasets.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-card__top"><span class="skill-card__category">MLOps</span><span class="skill-card__number">07</span></div>
+                        <h3>Déploiement, DevOps & MLOps</h3>
+                        <p>Git, GitHub, Docker, API de modèles IA, automatisation de pipelines, déploiement de modèles, intégration applicative, Postman, Jupyter Notebook et environnements Python.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-card__top"><span class="skill-card__category">Build</span><span class="skill-card__number">08</span></div>
+                        <h3>Conception & Méthodologies</h3>
+                        <p>UML, programmation orientée objet, architecture MVC, conception d'API REST, analyse des besoins, résolution de problèmes, tests, documentation et Agile.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-card__top"><span class="skill-card__category">Sécurité</span><span class="skill-card__number">09</span></div>
+                        <h3>Sécurité & Gestion des accès</h3>
+                        <p>Authentification JWT, rôles et permissions, contrôle des accès, sécurisation des API REST et protection des données.</p>
+                    </article>
+
+                    <article class="skill-card skill-card--wide">
+                        <div class="skill-card__top"><span class="skill-card__category">Soft skills</span><span class="skill-card__number">10</span></div>
+                        <h3>Compétences personnelles</h3>
+                        <p>Esprit analytique, autonomie, curiosité, résolution de problèmes, rigueur, organisation, apprentissage, adaptabilité, créativité, persévérance, travail en équipe et communication.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="target-section content-section">
+        <div class="row">
+            <div class="column large-full">
+                <header class="projects-heading">
+                    <p class="section-eyebrow" data-i18n="projectsEyebrow">Sélection de projets</p>
+                    <h2 data-i18n="projectsTitle">Projets</h2>
+                    <p data-i18n="projectsIntro">Des expériences concrètes à la croisée de l'intelligence artificielle, de la santé et du développement logiciel.</p>
+                </header>
+
+                
+
+<div class="gallery-grid">
+                    <article class="gallery-project gallery-project--featured">
+                        <header class="gallery-project__header">
+                            <div>
+                                <p class="gallery-project__category" data-i18n="galleryWsiCategory">IA médicale · Imagerie numérique</p>
+                                <h3 data-i18n="galleryWsiTitle">Viewer de lames médicales (WSI)</h3>
+                            </div>
+                            <span class="gallery-project__index">01</span>
+                        </header>
+                        <div class="gallery-project__images">
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/wsi-viewer1.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture du tableau de bord LIMS">
+                                    <img src="images/screenshots/wsi-viewer1.png" alt="Tableau de bord LIMS avec indicateurs d'activité médicale" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryWsiDashboard">Tableau de bord LIMS</figcaption>
+                            </figure>
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/wsi-viewer.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture du viewer de lame numérique">
+                                    <img src="images/screenshots/wsi-viewer.png" alt="Viewer de lame histologique avec analyse assistée par IA" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryWsiViewer">Visualisation et analyse WSI</figcaption>
+                            </figure>
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/Procces.png" target="_blank" rel="noopener" aria-label="Ouvrir le schéma du processus d'imagerie numérique">
+                                    <img src="images/screenshots/Procces.png" alt="Étapes de numérisation et d'analyse des lames médicales" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryWsiWorkflow">Processus d'imagerie numérique</figcaption>
+                            </figure>
+                        </div>
+                    </article>
+
+                    <article class="gallery-project">
+                        <header class="gallery-project__header">
+                            <div>
+                                <p class="gallery-project__category" data-i18n="galleryMedicalCategory">Intelligence artificielle · Santé</p>
+                                <h3 data-i18n="galleryMedicalTitle">Diagnostic médical prédictif</h3>
+                            </div>
+                            <span class="gallery-project__index">02</span>
+                        </header>
+                        <div class="gallery-project__images">
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/diagnostic médical prédictif1.png" target="_blank" rel="noopener" aria-label="Ouvrir la page d'accueil du diagnostic médical">
+                                    <img src="images/screenshots/diagnostic médical prédictif1.png" alt="Page d'accueil de l'application de diagnostic médical assisté par IA" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryMedicalHome">Accueil du diagnostic</figcaption>
+                            </figure>
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/diagnostic médical prédictif2.png" target="_blank" rel="noopener" aria-label="Ouvrir le formulaire de diagnostic médical">
+                                    <img src="images/screenshots/diagnostic médical prédictif2.png" alt="Formulaire de diagnostic médical avec informations et examens cliniques" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryMedicalForm">Formulaire médical</figcaption>
+                            </figure>
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/PredictionMaladie2.png" target="_blank" rel="noopener" aria-label="Ouvrir les résultats du diagnostic">
+                                    <img src="images/screenshots/PredictionMaladie2.png" alt="Résultats d'une prédiction médicale avec niveau de confiance" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryMedicalResults">Résultats de prédiction</figcaption>
+                            </figure>
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/PredictionMaladie3.png" target="_blank" rel="noopener" aria-label="Ouvrir le résultat du diagnostic de dépression">
+                                    <img src="images/screenshots/PredictionMaladie3.png" alt="Résultat de prédiction pour le dépistage de la dépression" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryMedicalDepression">Dépistage de la dépression</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/diagnostic depression.png" target="_blank" rel="noopener" aria-label="Ouvrir le résultat du diagnostic de dépression">
+                                    <img src="images/screenshots/diagnostic depression.png" alt="Résultat de prédiction pour le dépistage de la dépression" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryMedicalDepression">Dépistage de la dépression</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/diagnostic tuberculose.png" target="_blank" rel="noopener" aria-label="Ouvrir le résultat du diagnostic de dépression">
+                                    <img src="images/screenshots/diagnostic tuberculose.png" alt="Résultat de prédiction pour le dépistage de la dépression" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryMedicalDepression">Dépistage de la dépression</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/formulair.png" target="_blank" rel="noopener" aria-label="Ouvrir le résultat du diagnostic de dépression">
+                                    <img src="images/screenshots/formulair.png" alt="Résultat de prédiction pour le dépistage de la dépression" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryMedicalDepression">Dépistage de la dépression</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/formulaire suite.png" target="_blank" rel="noopener" aria-label="Ouvrir le résultat du diagnostic de dépression">
+                                    <img src="images/screenshots/formulaire suite.png" alt="Résultat de prédiction pour le dépistage de la dépression" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryMedicalDepression">Dépistage de la dépression</figcaption>
+                            </figure>
+
+
+                        </div>
+                    </article>
+
+                    <article class="gallery-project">
+                        <header class="gallery-project__header">
+                            <div>
+                                <p class="gallery-project__category" data-i18n="galleryAttendanceCategory">Vision par ordinateur · RH</p>
+                                <h3 data-i18n="galleryAttendanceTitle">Pointage par reconnaissance faciale</h3>
+                            </div>
+                            <span class="gallery-project__index">03</span>
+                        </header>
+                        <div class="gallery-project__images">
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/DetectionFacial1.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la reconnaissance faciale">
+                                    <img src="images/screenshots/DetectionFacial1.png" alt="Reconnaissance faciale en direct avec détection de plusieurs visages" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryAttendanceRecognition">Reconnaissance faciale</figcaption>
+                            </figure>
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/DetectionFacial2.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de l'application de pointage">
+                                    <img src="images/screenshots/DetectionFacial2.png" alt="Application de pointage des employés avec reconnaissance faciale" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryAttendanceApp">Application de pointage</figcaption>
+                            </figure>
+                        </div>
+                    </article>
+
+                    <article class="gallery-project">
+                        <header class="gallery-project__header">
+                            <div>
+                                <p class="gallery-project__category" data-i18n="galleryHrCategory">Développement web · RH</p>
+                                <h3 data-i18n="galleryHrTitle">Gestion des employés</h3>
+                            </div>
+                            <span class="gallery-project__index">04</span>
+                        </header>
+                        <div class="gallery-project__images">
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/GestionEmp1.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la plateforme de gestion RH">
+                                    <img src="images/screenshots/GestionEmp1.png" alt="Plateforme web de gestion des employés et des services RH" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryHrDashboard">Espace de gestion RH</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/ajouter empl.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la plateforme de gestion RH">
+                                    <img src="images/screenshots/ajouter empl.png" alt="Plateforme web de gestion des employés et des services RH" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryHrDashboard">Espace de gestion RH</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/Bulletin salaire calculer auto.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la plateforme de gestion RH">
+                                    <img src="images/screenshots/Bulletin salaire calculer auto.png" alt="Plateforme web de gestion des employés et des services RH" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryHrDashboard">Espace de gestion RH</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/riracktec1.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la plateforme de gestion RH">
+                                    <img src="images/screenshots/riracktec1.png" alt="Plateforme web de gestion des employés et des services RH" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryHrDashboard">Espace de gestion RH</figcaption>
+                            </figure>
+                        </div>
+                    </article>
+
+                    <article class="gallery-project">
+                        <header class="gallery-project__header">
+                            <div>
+                                <p class="gallery-project__category" data-i18n="galleryFinanceCategory">Développement web · Finance</p>
+                                <h3 data-i18n="galleryFinanceTitle">Suivi des dépenses</h3>
+                            </div>
+                            <span class="gallery-project__index">05</span>
+                        </header>
+                        <div class="gallery-project__images">
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/GestionDepenses.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la plateforme de suivi des dépenses">
+                                    <img src="images/screenshots/GestionDepenses.png" alt="Plateforme de gestion et de suivi des dépenses d'entreprise" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryFinanceDashboard">Tableau de bord des dépenses</figcaption>
+                            </figure>
+
+        
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/liste des projets.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la plateforme de suivi des dépenses">
+                                    <img src="images/screenshots/liste des projets.png" alt="Plateforme de gestion et de suivi des dépenses d'entreprise" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryFinanceDashboard">Tableau de bord des dépenses</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/projets details.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la plateforme de suivi des dépenses">
+                                    <img src="images/screenshots/projets details.png" alt="Plateforme de gestion et de suivi des dépenses d'entreprise" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryFinanceDashboard">Tableau de bord des dépenses</figcaption>
+                            </figure>
+                        </div>
+                    </article>
+
+                    <article class="gallery-project">
+                        <header class="gallery-project__header">
+                            <div>
+                                <p class="gallery-project__category" data-i18n="galleryEducationCategory">Développement web · Education</p>
+                                <h3 data-i18n="galleryEducationTitle">Suivi de présence</h3>
+                            </div>
+                            <span class="gallery-project__index">06</span>
+                        </header>
+                        <div class="gallery-project__images">
+
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/page de garde presence.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la plateforme de suivi des dépenses">
+                                    <img src="images/screenshots/page de garde presence.png" alt="Plateforme de gestion et de suivi des dépenses d'entreprise" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryEducationDashboard">Tableau de bord des dépenses</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/profile etudiant presence.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la plateforme de suivi des dépenses">
+                                    <img src="images/screenshots/profile etudiant presence.png" alt="Plateforme de gestion et de suivi des dépenses d'entreprise" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryFinanceDashboard">Tableau de bord des dépenses</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/inscription gestion presence.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la plateforme de suivi des dépenses">
+                                    <img src="images/screenshots/inscription gestion presence.png" alt="Plateforme de gestion et de suivi des dépenses d'entreprise" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryFinanceDashboard">Tableau de bord des dépenses</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/liste des etudiants sans carte.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la plateforme de suivi des dépenses">
+                                    <img src="images/screenshots/liste des etudiants sans carte.png" alt="Plateforme de gestion et de suivi des dépenses d'entreprise" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryFinanceDashboard">Tableau de bord des dépenses</figcaption>
+                            </figure>
+
+                            <figure>
+                                <a class="gallery-image-link" href="images/screenshots/circuit ghiab.jfif" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la plateforme de suivi des dépenses">
+                                    <img src="images/screenshots/circuit ghiab.jfif" alt="Plateforme de gestion et de suivi des dépenses d'entreprise" loading="lazy">
+                                </a>
+                                <figcaption data-i18n="galleryFinanceDashboard">Tableau de bord des dépenses</figcaption>
+                            </figure>
+  
+                    </article>
+
+
+                    </div>
+                    </div>
+
+                </div>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+    </section>
+
+    <section id="certificates" class="target-section content-section">
+        <div class="row">
+            <div class="column large-full">
+                <div class="certificates-heading">
+                    <div>
+                        <p class="section-eyebrow" data-i18n="certificatesEyebrow">Apprentissage continu</p>
+                        <h2 data-i18n="certificatesTitle">Certificats</h2>
+                        <p data-i18n="certificatesIntro">Une sélection de mes certifications. Faites défiler pour découvrir la suite.</p>
+                    </div>
+                    <div class="certificates-controls" aria-label="Commandes des certificats" data-i18n-aria-label="certificatesControls">
+                        <span class="certificates-count" data-certificates-count aria-live="polite">01–03 / 14</span>
+                        <button class="certificates-arrow" type="button" data-certificates-previous aria-label="Certificats précédents" data-i18n-aria-label="certificatesPrevious" disabled>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6"/></svg>
+                        </button>
+                        <button class="certificates-arrow" type="button" data-certificates-next aria-label="Certificats suivants" data-i18n-aria-label="certificatesNext">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="certificates-carousel" data-certificates-carousel>
+                    <div class="certificates-track" id="certificates-track" tabindex="0" role="region" aria-roledescription="carrousel" aria-label="Galerie des certificats" data-i18n-aria-label="certificatesGallery">
+                        <!-- UM6P -->
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/IAFondations_UM6P.png" alt="Fondamentaux de l'intelligence artificielle — UM6P" loading="lazy" draggable="false"></div>
+                            <h3>Fondamentaux de l'intelligence artificielle</h3><p>UM6P</p>
+                        </article>
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/ML_UM6P.png" alt="Machine Learning — UM6P" loading="lazy" draggable="false"></div>
+                            <h3>Machine Learning</h3><p>UM6P</p>
+                        </article>
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/CriticalTinking_UM6P.png" alt="Pensée critique — UM6P" loading="lazy" draggable="false"></div>
+                            <h3>Pensée critique</h3><p>UM6P</p>
+                        </article>
+                        <!-- Google -->
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/Agile.png" alt="Agile" loading="lazy" draggable="false"></div>
+                            <h3>Agile Scrum</h3><p>Google</p>
+                        </article>
+                        <!-- ORACLE -->
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/OraclCloudInfraPro.png" alt="Oracle Cloud Infrastructure — Professional" loading="lazy" draggable="false"></div>
+                            <h3>Cloud Infrastructure Professional</h3><p>Oracle</p>
+                        </article>
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/OracleCloudInfeaGENAI.png" alt="Oracle Cloud Infrastructure — Generative AI" loading="lazy" draggable="false"></div>
+                            <h3>Cloud Infrastructure Generative AI</h3><p>Oracle</p>
+                        </article>
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/OracleCloudInfra.png" alt="Oracle Cloud Infrastructure" loading="lazy" draggable="false"></div>
+                            <h3>Oracle Cloud Infrastructure</h3><p>Oracle</p>
+                        </article>
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/OracleCloudInfraAssociat.png" alt="Oracle Cloud Infrastructure — Associate" loading="lazy" draggable="false"></div>
+                            <h3>Cloud Infrastructure Associate</h3><p>Oracle</p>
+                        </article>
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/OracleFusionAI-Reel1.png" alt="Oracle Fusion AI — Reel 1" loading="lazy" draggable="false"></div>
+                            <h3>Oracle Fusion AI — Reel 1</h3><p>Oracle</p>
+                        </article>
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/OracleFusionAI.png" alt="Oracle Fusion AI" loading="lazy" draggable="false"></div>
+                            <h3>Oracle Fusion AI</h3><p>Oracle</p>
+                        </article>
+
+                        <!-- 365  DataScience-->
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/Git_Github.png" alt="Git et GitHub" loading="lazy" draggable="false"></div>
+                            <h3>Git &amp; GitHub</h3><p>365 DataScience</p>
+                        </article>
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/IntroIA365.png" alt="Introduction à l'intelligence artificielle — Microsoft 365" loading="lazy" draggable="false"></div>
+                            <h3>Introduction à l'intelligence artificielle</h3><p>365 DataScience</p>
+                        </article>
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/math.png" alt="Mathématiques" loading="lazy" draggable="false"></div>
+                            <h3>Mathématiques</h3><p>365 DataScience</p>
+                        </article>
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/ML365.png" alt="Machine learning — Microsoft 365" loading="lazy" draggable="false"></div>
+                            <h3>Machine learning</h3><p>365 DataScience</p>
+                        </article>
+
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/ML-SVM-365.png" alt="Machine learning — Microsoft 365" loading="lazy" draggable="false"></div>
+                            <h3>Machine learning-SVM</h3><p>365 DataScience</p>
+                        </article>
+                        
+
+                        <!-- IBM -->
+
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/IntroIA_IBM.png" alt="Introduction à l'intelligence artificielle — IBM" loading="lazy" draggable="false"></div>
+                            <h3>Introduction à l'intelligence artificielle</h3><p>IBM</p>
+                        </article>
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/GenAIIntro.png" alt="Generative AI Introduction" loading="lazy" draggable="false"></div>
+                            <h3>Generative AI Introduction</h3><p>IBM</p>
+                        </article>
+
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/BuildChatBots.png" alt="Build Chat Bots" loading="lazy" draggable="false"></div>
+                            <h3>Build Chat Bots</h3><p>IBM</p>
+                        </article>
+
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/GenAIPromptEngin.png" alt="Generative AI Prompt Engineering" loading="lazy" draggable="false"></div>
+                            <h3>Generative AI Prompt Engineering</h3><p>IBM</p>
+                        </article>
+
+
+                        <!-- Northwestern University -->
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/LeadingTeams.png" alt="Leadership et gestion d'équipe" loading="lazy" draggable="false"></div>
+                            <h3>Leadership et gestion d'équipe</h3><p>University of Michigan</p>
+                        </article>
+                        
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/Leadeship, TeamWork and Negotiation.png" alt="Leadership, Teamwork and Negotiation" loading="lazy" draggable="false"></div>
+                            <h3>Leadership, Teamwork and Negotiation</h3><p>Northwestern University</p>
+                        </article>
+                        <!-- University of Washington -->
+
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/MLFondations.png" alt="Machine Learning Foundations" loading="lazy" draggable="false"></div>
+                            <h3>Machine Learning Foundations</h3><p>University of Washington</p>
+                        </article>
+
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/MLReg.png" alt="Machine Learning Regression" loading="lazy" draggable="false"></div>
+                            <h3>Machine Learning Regression</h3><p>University of Washington</p>
+                        </article>
+
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/MLClass.png" alt="Machine Learning Classification" loading="lazy" draggable="false"></div>
+                            <h3>Machine Learning Classification</h3><p>University of Washington</p>
+                        </article>
+
+                        <article class="certificate-card">
+                            <div class="certificate-card__image"><img src="images/Certificates/MLClusteringRetrei.png" alt="Machine Learning Clustering and Retrieval" loading="lazy" draggable="false"></div>
+                            <h3>Machine Learning Clustering and Retrieval</h3><p>University of Washington</p>
+                        </article>
+
+                        
+
+
+                    </div>
+                    <div class="certificates-progress" role="progressbar" aria-label="Progression dans les certificats" data-i18n-aria-label="certificatesProgress" aria-valuemin="0" aria-valuemax="100" ariavaluenow="0">
+                        <span data-certificates-progress></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journal" class="target-section content-section">
+        <div class="row">
+            <div class="column large-full">
+                <h2>Journal</h2>
+                <p>Mon parcours professionnel, du plus récent au plus ancien.</p>
+
+                <article>
+                    <h3>AI Engineer, DataPathology</h3>
+                    <p><em>Février 2026 – Juin 2026 (5 mois) · Casablanca, Maroc</em></p>
+                    <p>Conception et développement d'un prototype de LIMS et d'un Viewer WSI pour la visualisation de lames
+                        numérisées. Intégration d'un module d'IA qui évalue automatiquement la qualité des images.</p>
+                </article>
+
+                <article>
+                    <h3>AI Engineer, GlyciOne France</h3>
+                    <p><em>Juillet 2025 – Octobre 2025 (4 mois) · France</em></p>
+                    <p>Développement d'une application web de diagnostic médical prédictif (Alzheimer, dépression,
+                        hypertension) en ASP.NET, avec intégration de modèles de Machine Learning et de Deep Learning,
+                        ainsi que de Tesseract OCR pour extraire les données des documents médicaux.</p>
+                </article>
+
+                <article>
+                    <h3>Software Engineer, RIRAKTECH SARL</h3>
+                    <p><em>Juillet 2024 (1 mois) · Rabat, Maroc</em></p>
+                    <p>Conception, développement et livraison d'une application web de gestion des employés avec calcul
+                        automatique des fiches de paie.</p>
+                </article>
+
+                <article>
+                    <h3>SMI, Groupe Managem</h3>
+                    <p><em>Août 2022 - Août 2023 - Août Sept 2024 (4 mois) · Tinghir, Maroc</em></p>
+                    <p>Travail au service de géologie et de traitement dans le cadre d'une immersion professionnelle.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="life" class="target-section content-section">
+        <div class="row">
+            <div class="column large-full">
+                <header class="education-heading">
+                    <div>
+                        <p class="section-eyebrow" data-i18n="lifeEyebrow">Parcours académique</p>
+                        <h2 data-i18n="lifeTitle">Formation</h2>
+                    </div>
+                    <p class="education-intro" data-i18n="lifeIntro">Mon parcours de formation, de la physique à l'ingénierie informatique.</p>
+                </header>
+
+                <div class="education-layout">
+                    <div class="education-timeline" aria-label="Chronologie de la formation" data-i18n-aria-label="educationTimelineLabel">
+                        <article class="education-item">
+                            <div class="education-item__marker" aria-hidden="true"><span>01</span></div>
+                            <div class="education-item__content">
+                                <p class="education-item__period" data-i18n="educationPeriodOne">Oct. 2023 – Juin 2026</p>
+                                <h3 data-i18n="educationDegreeOne">Ingénieur d'État en Génie Informatique</h3>
+                                <p class="education-item__place" data-i18n="educationPlaceOne">Faculté des Sciences et Techniques · Errachidia</p>
+                                <p class="education-item__description" data-i18n="educationDescriptionOne">Spécialisation en intelligence artificielle, génie logiciel et systèmes d'information.</p>
+                            </div>
+                        </article>
+
+                        <article class="education-item">
+                            <div class="education-item__marker" aria-hidden="true"><span>02</span></div>
+                            <div class="education-item__content">
+                                <p class="education-item__period" data-i18n="educationPeriodTwo">Sept. 2021 – Juin 2023</p>
+                                <h3 data-i18n="educationDegreeTwo">Bac +2 · Mathématiques, Informatique et Physique</h3>
+                                <p class="education-item__place" data-i18n="educationPlaceTwo">Faculté des Sciences et Techniques · Settat</p>
+                                <p class="education-item__description" data-i18n="educationDescriptionTwo">Socle scientifique et premiers travaux en programmation, algorithmique et modélisation.</p>
+                            </div>
+                        </article>
+
+                        <article class="education-item">
+                            <div class="education-item__marker" aria-hidden="true"><span>03</span></div>
+                            <div class="education-item__content">
+                                <p class="education-item__period" data-i18n="educationPeriodThree">Sept. 2020 – Juin 2021</p>
+                                <h3 data-i18n="educationDegreeThree">Baccalauréat · Sciences physiques</h3>
+                                <p class="education-item__place" data-i18n="educationPlaceThree">Lycée Qualifiant Almorabitin · Tinghir</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <aside class="education-context" aria-label="Formation pratique" data-i18n-aria-label="educationContextLabel">
+                        <p class="education-context__label" data-i18n="educationContextLabelText">En pratique</p>
+                        <strong data-i18n="educationContextYears">2022–2026</strong>
+                        <p data-i18n="educationContextDescription">Quatre expériences professionnelles et immersions en entreprise, du site industriel à l'ingénierie IA.</p>
+                        <div class="education-context__list">
+                            <span>DataPathology</span>
+                            <span>GlyciOne</span>
+                            <span>RIRAKTECH</span>
+                            <span>Managem</span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="target-section content-section">
+        <div class="row">
+            <div class="column large-full">
+                <div class="contact-layout">
+                    <header class="contact-heading">
+                        <p class="section-eyebrow" data-i18n="contactEyebrow">Disponible pour collaborer</p>
+                        <h2 data-i18n="contactTitle">Contact</h2>
+                        <p data-i18n="contactIntro">Intéressé par un poste en IA ou en développement Full Stack ? Écrivez-moi.</p>
+                    </header>
+
+                    <a class="contact-email" href="mailto:addichaneayoub@gmail.com">
+                        <span data-i18n="contactEmailLabel">Écrire un email</span>
+                        <strong>addichaneayoub@gmail.com</strong>
+                        <span class="contact-email__arrow" aria-hidden="true">↗</span>
+                    </a>
+                </div>
+
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <p data-i18n="contactPhoneLabel">Téléphone</p>
+                        <a href="tel:+212605644509">+212 6 87 26 57 78</a>
+                    </div>
+                    <div class="contact-detail">
+                        <p data-i18n="contactLocationLabel">Localisation</p>
+                        <span>Casablanca, Maroc</span>
+                    </div>
+                    <nav class="contact-socials" aria-label="Profils professionnels" data-i18n-aria-label="contactProfilesLabel">
+                        <a href="https://github.com/AYoubaadd" target="_blank" rel="noopener">GitHub ↗</a>
+                        <a href="https://www.linkedin.com/in/ayoub-addichane-770ba1282" target="_blank" rel="noopener">LinkedIn ↗</a>
+                        <a href="https://www.credly.com/users/ayoub-addichane" target="_blank" rel="noopener">Credly ↗</a>
+                    </nav>
+                </div>
+
+                <footer class="contact-footer">
+                    <span>© 2026 Ayoub Addichane</span>
+                    <span class="visitor-count" data-analytics-visitors aria-live="polite" aria-atomic="true">Visiteurs uniques : chargement…</span>
+                    <span data-i18n="contactFooterNote">Conçu avec précision et curiosité.</span>
+                </footer>
+            </div>
+        </div>
+    </section>
+    
+    <aside class="chatbot" data-chatbot>
+        <button class="chatbot-toggle" type="button" data-chatbot-toggle aria-expanded="false" aria-controls="chatbot-panel" aria-label="Ouvrir le chatbot">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H6l-3 2v-6.5a7.5 7.5 0 1 1 17-3Z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></svg>
+            <span data-chatbot-toggle-label>Discuter avec mon assistant</span>
+        </button>
+        <section class="chatbot-panel" id="chatbot-panel" role="dialog" aria-modal="false" aria-labelledby="chatbot-title" hidden>
+            <header class="chatbot-header">
+                <div class="chatbot-avatar" aria-hidden="true">A</div>
+                <div class="chatbot-heading">
+                    <h2 id="chatbot-title" data-chatbot-title>Assistant d’Ayoub</h2>
+                    <p data-chatbot-subtitle>Posez-moi une question sur mon parcours</p>
+                </div>
+                <button class="chatbot-close" type="button" data-chatbot-close aria-label="Fermer le chatbot">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+                </button>
+            </header>
+            <div class="chatbot-messages" data-chatbot-messages role="log" aria-live="polite" aria-relevant="additions text">
+                <p class="chatbot-message chatbot-message--assistant" data-chatbot-greeting>Bonjour ! Je peux vous renseigner sur mes projets, mes compétences et mon parcours.</p>
+            </div>
+            <form class="chatbot-form" data-chatbot-form>
+                <label class="sr-only" for="chatbot-input" data-chatbot-input-label>Votre question</label>
+                <textarea id="chatbot-input" name="message" rows="1" maxlength="1000" required data-chatbot-input placeholder="Écrivez votre question…"></textarea>
+                <button class="chatbot-send" type="submit" data-chatbot-send aria-label="Envoyer le message">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                </button>
+            </form>
+            <p class="chatbot-note" data-chatbot-note>Les réponses sont générées par IA et peuvent contenir des erreurs.</p>
+        </section>
+    </aside>
+
+    <div class="ss-go-top">
+        <a class="smoothscroll" title="Retour en haut" aria-label="Retour en haut" href="#top">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m5 15 7-7 7 7"/>
+            </svg>
+        </a>
+    </div>
+    
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js" integrity="sha512-Blu6KWaTqestULmtJUTB2mwDFTB/FDRuTHV52Uu5dTFVQZ8YWUq2LuxN/brNEjWAqlHr50oAbxrydsuxoK/mqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/preferences.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/projects-gallery.js"></script>
+    <script src="js/chatbot-widget.js"></script>
+
+</body>
+</html>

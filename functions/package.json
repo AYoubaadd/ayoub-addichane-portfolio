@@ -1,0 +1,12 @@
+{
+  "name": "ingolfur-chatbot-functions",
+  "private": true,
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@google-analytics/data": "^5.2.0",
+    "firebase-functions": "^7.4.0"
+  }
+}
