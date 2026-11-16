@@ -94,6 +94,9 @@
             educationPeriodThree: 'Sept. 2020 – June 2021', educationDegreeThree: 'High school diploma · Physical sciences', educationPlaceThree: 'Almorabitin Qualified High School · Tinghir',
             skillsEyebrow: 'Technical expertise', skillsTitle: 'Skills', skillsIntro: 'Combined strengths in artificial intelligence, software engineering, and teamwork.',
             galleryTitle: 'Gallery', contactTitle: 'Contact', contactEyebrow: 'Available to collaborate', contactEmailLabel: 'Send an email', contactPhoneLabel: 'Phone', contactLocationLabel: 'Location', contactProfilesLabel: 'Professional profiles', contactFooterNote: 'Designed with precision and curiosity.',
+            contactIntro: 'Interested in an AI or full-stack development role?',
+            contactCollaboration: 'Have an idea, project, or digital need? I am also open to collaborations to turn your ideas into practical, innovative solutions.',
+            contactCta: 'Get in touch — let’s bring your ideas to life!',
             visitorCountLoading: 'Unique visitors: loading…', visitorCountUnavailable: 'Unique visitors: unavailable',
 
             skillsLead: 'Technical skills',
@@ -103,8 +106,7 @@
             skillDataText: 'PostgreSQL, MySQL, SQL Server, Oracle, MongoDB, Git, GitHub, Docker, Postman, and Jupyter.',
             journalIntro: 'My professional experience, from most recent to earliest.',
             lifeIntro: 'My education and academic background.',
-            galleryIntro: 'Explore a selection of my projects, organized by area.',
-            contactIntro: 'Interested in an AI or full-stack development role? Get in touch.'
+            galleryIntro: 'Explore a selection of my projects, organized by area.'
         },
         fr: {}
     };
@@ -158,8 +160,7 @@
                 '#projects h2': 'projectsTitle', '#certificates h2': 'certificatesTitle',
                 '#journal h2': 'journalTitle', '#life h2': 'lifeTitle', '#gallery h2': 'galleryTitle',
                 '#contact h2': 'contactTitle', '#journal > .row p': 'journalIntro',
-                '#life > .row p': 'lifeIntro', '#gallery > .row p': 'galleryIntro',
-                '#contact > .row p': 'contactIntro'
+                '#life > .row p': 'lifeIntro', '#gallery > .row p': 'galleryIntro'
         };
         Object.keys(replacements).forEach(function (selector) {
             const element = document.querySelector(selector);

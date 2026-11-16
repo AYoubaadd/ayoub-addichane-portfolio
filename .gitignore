@@ -38,3 +38,8 @@ desktop.ini
 # IDE
 .vscode/
 .idea/
+
+.env
+.env.local
+.env.*.local
+*.json

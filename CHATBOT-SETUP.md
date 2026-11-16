@@ -1,5 +1,7 @@
 # Chatbot setup
 
+> The Vercel deployment uses [VERCEL-SETUP.md](./VERCEL-SETUP.md). The Firebase instructions below are for the legacy Firebase Functions deployment only.
+
 The portfolio chatbot uses a Firebase HTTPS Function and the Gemini API. The Gemini key is stored as a Firebase secret and is never sent to the browser.
 
 ## Deploy to your own Firebase project

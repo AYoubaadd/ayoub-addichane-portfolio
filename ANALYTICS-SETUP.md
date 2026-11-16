@@ -1,5 +1,7 @@
 # Google Analytics setup
 
+> The Vercel deployment uses [VERCEL-SETUP.md](./VERCEL-SETUP.md). The Firebase instructions below are for the legacy Firebase Functions deployment only.
+
 The portfolio uses the GA4 Data API from a Firebase Function to show the lifetime count of unique users. The browser only receives the public GA4 Measurement ID and visitor total; no service-account key is stored in the site or `.env.local`.
 
 ## 1. Create a GA4 property

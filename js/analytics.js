@@ -65,19 +65,20 @@
                 signal: AbortSignal.timeout(8000)
             });
             const payload = await response.json();
+            const hasMeasurementId = typeof payload.measurementId === 'string'
+                && /^G-[A-Z0-9]+$/i.test(payload.measurementId);
+            if (hasMeasurementId) startGoogleAnalytics(payload.measurementId);
 
             if (!response.ok) {
                 throw new Error(payload.code || 'analytics_unavailable');
             }
-            if (typeof payload.measurementId !== 'string'
-                || !/^G-[A-Z0-9]+$/i.test(payload.measurementId)
+            if (!hasMeasurementId
                 || !Number.isSafeInteger(payload.visitors)
                 || payload.visitors < 0) {
                 throw new Error('analytics_invalid_response');
             }
 
             visitorTotal = payload.visitors;
-            startGoogleAnalytics(payload.measurementId);
         } catch (error) {
             requestFailed = true;
             console.warn('[Analytics] Visitor statistics are unavailable.', {

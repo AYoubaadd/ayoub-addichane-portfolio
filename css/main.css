@@ -4266,11 +4266,31 @@ html[data-theme="dark"] .gallery-project__images figcaption {
 .contact-heading h2 {
   max-width: none;
   margin-bottom: 1.6rem;
+  font-size: clamp(4.8rem, 8vw, 8.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
 }
 
-.contact-heading > p:last-child {
+.contact-heading > p:not(.section-eyebrow):not(.contact-callout) {
   max-width: 48rem;
-  margin-bottom: 0;
+  margin-bottom: 1.4rem;
+  font-size: clamp(1.65rem, 1.35vw, 1.85rem);
+  line-height: 1.7;
+}
+
+.contact-heading .contact-callout {
+  max-width: 46rem;
+  margin: 2.2rem 0 0;
+  padding: 1.3rem 1.6rem;
+  border-left: 2px solid var(--color-coral);
+  background: rgba(242, 240, 232, 0.05);
+  font-size: clamp(1.7rem, 1.5vw, 2rem);
+  line-height: 1.5;
+}
+
+.contact-callout strong {
+  color: var(--color-sage) !important;
+  font-weight: 700;
 }
 
 .contact-heading .section-eyebrow {
