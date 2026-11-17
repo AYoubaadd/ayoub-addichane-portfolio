@@ -22,7 +22,7 @@ const fallbackModel =
 // Temps maximum par tentative.
 // Deux tentatives de 4 secondes permettent de limiter
 // le risque de dépasser la durée d'exécution Vercel.
-const requestTimeoutMs = 4000;
+const requestTimeoutMs = 15000;
 
 const blockedFinishReasons = new Set([
   "SAFETY",
