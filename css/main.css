@@ -3435,7 +3435,7 @@ html[data-theme="dark"] .about-action--secondary {
   background: transparent;
   color: var(--color-ink);
   cursor: pointer;
-  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .certificates-arrow svg {
@@ -3457,6 +3457,32 @@ html[data-theme="dark"] .about-action--secondary {
   border-color: var(--color-ink);
   background: var(--color-ink);
   color: var(--color-paper);
+}
+
+.certificates-arrow:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.6rem 1.6rem rgba(23, 33, 31, 0.16);
+}
+
+.certificates-arrow:active:not(:disabled) {
+  transform: translateY(0) scale(0.96);
+}
+
+.certificates-arrow:focus-visible {
+  outline: 2px solid #60766b;
+  outline-offset: 3px;
+}
+
+.certificates-arrow[data-certificates-previous]:not(:disabled):hover svg {
+  transform: translateX(-2px);
+}
+
+.certificates-arrow[data-certificates-next]:not(:disabled):hover svg {
+  transform: translateX(2px);
+}
+
+.certificates-arrow svg {
+  transition: transform 180ms ease;
 }
 
 .certificates-arrow:disabled {
@@ -3557,6 +3583,10 @@ html[data-theme="dark"] .certificates-arrow:not(:disabled):focus-visible {
   color: #151d1e;
 }
 
+html[data-theme="dark"] .certificates-arrow:focus-visible {
+  outline-color: #c9d8c2;
+}
+
 html[data-theme="dark"] .certificate-card__image {
   border-color: rgba(232, 233, 223, 0.16);
   background: #fff;
@@ -3568,6 +3598,14 @@ html[data-theme="dark"] .certificates-progress {
 
 html[data-theme="dark"] .certificates-progress span {
   background: #c9d8c2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .certificates-arrow,
+  .certificates-arrow svg,
+  .certificates-progress span {
+    transition: none;
+  }
 }
 
 .content-section article {

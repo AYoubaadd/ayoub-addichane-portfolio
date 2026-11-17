@@ -1,15 +1,18 @@
 (function () {
     const translations = {
         en: {
+            pageTitle: 'Ayoub Addichane | AI & Software Engineer',
+            pageDescription: 'Portfolio of Ayoub Addichane, a computer engineer specializing in artificial intelligence, machine learning, deep learning, computer vision, OCR, and generative AI (LLMs and RAG).',
             navHome: 'Home', navAbout: 'About', navSkills: 'Skills', navProjects: 'Projects',
-            navCertificates: 'Certificates', navJournal: 'Journal', navLife: 'Education',
+            navCertificates: 'Certificates', navJournal: 'Experience', navLife: 'Education',
             navGallery: 'Gallery', navContact: 'Contact',
+            siteControlsLabel: 'Site preferences', languageLabel: 'Language',
             menuLabel: 'Menu', menuOpen: 'Open menu', menuClose: 'Close menu',
             headerRole: 'AI Engineer', homeBrand: 'Ayoub Addichane, home',
             mainNavigation: 'Main navigation',
             certificatesEyebrow: 'Continuous learning',
             certificatesTitle: 'Certificates',
-            certificatesIntro: 'A selection of my certifications. Scroll to explore more.',
+            certificatesIntro: 'Browse my certifications to explore more.',
             certificatesControls: 'Certificate controls',
             certificatesPrevious: 'Previous certificates',
             certificatesNext: 'Next certificates',
@@ -26,18 +29,35 @@
             galleryMedicalTitle: 'Predictive medical diagnosis',
             galleryMedicalHome: 'Diagnosis home page',
             galleryMedicalForm: 'Medical form',
-            galleryMedicalResults: 'Prediction results',
+            galleryMedicalAutofill: 'Automatic form completion',
+            galleryMedicalFormContinuation: 'Medical assessment form',
+            galleryMedicalResults: 'Analysis results',
             galleryMedicalDepression: 'Depression screening',
+            galleryTuberculosisDiagnosis: 'Tuberculosis diagnosis from MRI scans',
+            galleryTuberculosisResults: 'Tuberculosis test results',
             galleryAttendanceCategory: 'Computer vision · HR',
             galleryAttendanceTitle: 'Facial recognition attendance',
             galleryAttendanceRecognition: 'Facial recognition',
             galleryAttendanceApp: 'Attendance application',
             galleryHrCategory: 'Web development · HR',
             galleryHrTitle: 'Employee management',
-            galleryHrDashboard: 'HR management workspace',
+            galleryHrApplication: 'Human resources management application',
+            galleryHrDashboard: 'HR management dashboard',
+            galleryHrWorkspace: 'HR management workspace',
+            galleryHrAddEmployee: 'Add an employee',
+            galleryHrPayroll: 'Automatically generated payslip',
             galleryFinanceCategory: 'Web development · Finance',
             galleryFinanceTitle: 'Expense tracking',
             galleryFinanceDashboard: 'Expense dashboard',
+            galleryFinanceProjects: 'My projects',
+            galleryFinanceProjectDetails: 'Project details',
+            galleryEducationCategory: 'Web development · Education',
+            galleryEducationTitle: 'Attendance tracking',
+            galleryEducationDashboard: 'Home page',
+            galleryEducationAuthentication: 'Sign-in',
+            galleryEducationStudent: 'Student portal',
+            galleryEducationAdminCards: 'Admin portal · Card assignment',
+            galleryEducationRfid: 'RFID card reader',
             heroKicker: 'Artificial Intelligence Engineer · Morocco',
             heroTitle: 'I build intelligent systems that serve the real world.',
             heroSummary: 'Ayoub Addichane — applied AI, computer vision, and full-stack development.',
@@ -87,8 +107,8 @@
             academicRecommendationDescription: 'Machine Learning model designed to personalize product recommendations.',
             academicExpensesTitle: 'Expense tracking',
             academicExpensesDescription: 'Web application for tracking business budgets and expenses.',
-            certificatesTitle: 'Certificates', journalTitle: 'Journal', lifeTitle: 'Education', lifeEyebrow: 'Academic background', lifeIntro: 'My education, from physics to computer engineering.',
-            educationTimelineLabel: 'Education timeline', educationContextLabel: 'Practical training', educationContextLabelText: 'In practice', educationContextYears: '2022–2026', educationContextDescription: 'Four professional experiences and company placements, from industrial operations to AI engineering.',
+            certificatesTitle: 'Certificates', journalTitle: 'Experience', lifeTitle: 'Education', lifeEyebrow: 'Academic background', lifeIntro: 'My education, from physics to computer engineering.',
+            educationTimelineLabel: 'Education timeline', educationContextLabel: 'Practical training', educationContextLabelText: 'In practice', educationContextYears: '2022–2026', educationContextDescription: 'Four professional experiences, from industrial operations to AI engineering.',
             educationPeriodOne: 'Oct. 2023 – June 2026', educationDegreeOne: 'State Engineering Degree in Computer Engineering', educationPlaceOne: 'Faculty of Sciences and Technology · Errachidia', educationDescriptionOne: 'Specialization in artificial intelligence, software engineering, and information systems.',
             educationPeriodTwo: 'Sept. 2021 – June 2023', educationDegreeTwo: 'Two-year university diploma · Mathematics, Computer Science and Physics', educationPlaceTwo: 'Faculty of Sciences and Technology · Settat', educationDescriptionTwo: 'Scientific foundation and first work in programming, algorithms, and modeling.',
             educationPeriodThree: 'Sept. 2020 – June 2021', educationDegreeThree: 'High school diploma · Physical sciences', educationPlaceThree: 'Almorabitin Qualified High School · Tinghir',
@@ -97,6 +117,8 @@
             contactIntro: 'Interested in an AI or full-stack development role?',
             contactCollaboration: 'Have an idea, project, or digital need? I am also open to collaborations to turn your ideas into practical, innovative solutions.',
             contactCta: 'Get in touch — let’s bring your ideas to life!',
+            contactCity: 'Casablanca, Morocco',
+            downloadCv: 'Download my CV',
             visitorCountLoading: 'Unique visitors: loading…', visitorCountUnavailable: 'Unique visitors: unavailable',
 
             skillsLead: 'Technical skills',
@@ -105,6 +127,41 @@
             skillWebText: 'ASP.NET Core, React, Next.js, NestJS, Laravel, Flask, FastAPI, REST APIs, HTML, CSS, and JavaScript.',
             skillDataText: 'PostgreSQL, MySQL, SQL Server, Oracle, MongoDB, Git, GitHub, Docker, Postman, and Jupyter.',
             journalIntro: 'My professional experience, from most recent to earliest.',
+            journalRoleOne: 'AI Engineer · DataPathology',
+            journalDateOne: 'February–June 2026 · 5 months · Casablanca, Morocco',
+            journalDescriptionOne: 'Designed and developed a laboratory information management system (LIMS) prototype and a whole-slide imaging (WSI) viewer. Integrated an AI module to automatically assess image quality.',
+            journalRoleTwo: 'AI Engineer · GlyciOne France',
+            journalDateTwo: 'July–October 2025 · 4 months · France',
+            journalDescriptionTwo: 'Developed a web application for predictive diagnosis (Alzheimer’s disease, depression, and hypertension) using ASP.NET, machine learning and deep learning models, and Tesseract OCR to extract data from medical documents.',
+            journalRoleThree: 'Software Engineer · RIRAKTECH SARL',
+            journalDateThree: 'July 2024 · 1 month · Rabat, Morocco',
+            journalDescriptionThree: 'Designed, developed, and delivered a web application for employee management, including automated payslip calculations.',
+            journalRoleFour: 'Geology and Processing · Managem Group (SMI)',
+            journalDateFour: 'August 2022, August 2023, and August–September 2024 · 4 months total · Tinghir, Morocco',
+            journalDescriptionFour: 'Worked in the geology and processing departments as part of an industry placement.',
+            skillCardOneTitle: 'Artificial Intelligence & Machine Learning',
+            skillCardOneText: 'Python, NumPy, Pandas, Scikit-learn, TensorFlow, Keras, PyTorch, machine learning, deep learning, regression, classification, clustering, feature engineering, hyperparameter tuning, Random Forest, XGBoost, SVM, KNN, PCA, and Naive Bayes.',
+            skillCategoryOne: 'AI',
+            skillCategoryEight: 'Design',
+            skillCategoryNine: 'Security',
+            skillCardTwoTitle: 'Generative AI, LLMs & RAG',
+            skillCardTwoText: 'Large language models, generative AI, retrieval-augmented generation, prompt engineering, embeddings, semantic search, chunking, vector search, LangChain, Hugging Face, FAISS, ChromaDB, LLM API integration, and AI chatbots.',
+            skillCardThreeTitle: 'Computer Vision & Image Processing',
+            skillCardThreeText: 'OpenCV, OpenSlide, Tesseract OCR, image classification, patch extraction, medical image analysis, whole-slide images, automated quality control, ResNet-50 fine-tuning, heat maps, and result analysis.',
+            skillCardFourTitle: 'Full-Stack Web Development',
+            skillCardFourText: 'C#, ASP.NET Core, Entity Framework, React.js, Next.js, NestJS, Laravel, Flask, FastAPI, PHP, HTML5, CSS3, JavaScript, TypeScript, Tailwind CSS, Bootstrap, REST APIs, JWT, and MVC architecture.',
+            skillCardFiveTitle: 'Programming Languages',
+            skillCardFiveText: 'Python, C#, Java, C, C++, JavaScript, TypeScript, PHP, SQL, and object-oriented programming.',
+            skillCardSixTitle: 'Databases & Data Engineering',
+            skillCardSixText: 'PostgreSQL, MySQL, Microsoft SQL Server, Oracle Database, MongoDB, data modeling, advanced SQL, data cleaning, preprocessing, and dataset preparation.',
+            skillCardSevenTitle: 'Deployment, DevOps & MLOps',
+            skillCardSevenText: 'Git, GitHub, Docker, AI model APIs, pipeline automation, model deployment, application integration, Postman, Jupyter Notebook, and Python environments.',
+            skillCardEightTitle: 'Design & Methodologies',
+            skillCardEightText: 'UML, object-oriented programming, MVC architecture, REST API design, requirements analysis, problem-solving, testing, documentation, and Agile.',
+            skillCardNineTitle: 'Security & Access Management',
+            skillCardNineText: 'JWT authentication, roles and permissions, access control, REST API security, and data protection.',
+            skillCardTenTitle: 'Soft Skills',
+            skillCardTenText: 'Analytical thinking, independence, curiosity, problem-solving, attention to detail, organization, continuous learning, adaptability, creativity, perseverance, teamwork, and communication.',
             lifeIntro: 'My education and academic background.',
             galleryIntro: 'Explore a selection of my projects, organized by area.'
         },
@@ -116,6 +173,13 @@
         en: { light: 'Light mode', dark: 'Dark mode' }
     };
     const root = document.documentElement;
+    const originalPageTitle = document.title;
+    const descriptionMeta = document.querySelector('meta[name="description"]');
+    const originalPageDescription = descriptionMeta ? descriptionMeta.content : '';
+    const openGraphTitle = document.querySelector('meta[property="og:title"]');
+    const originalOpenGraphTitle = openGraphTitle ? openGraphTitle.content : '';
+    const openGraphDescription = document.querySelector('meta[property="og:description"]');
+    const originalOpenGraphDescription = openGraphDescription ? openGraphDescription.content : '';
     const languageButtons = document.querySelectorAll('[data-language]');
     const themeButton = document.querySelector('[data-theme-toggle]');
     const themeLabel = document.querySelector('[data-theme-label]');
@@ -138,6 +202,22 @@
     function setLanguage(language) {
         const selectedLanguage = language === 'en' ? 'en' : 'fr';
         root.lang = selectedLanguage;
+        document.title = selectedLanguage === 'en' ? translations.en.pageTitle : originalPageTitle;
+        if (descriptionMeta) {
+            descriptionMeta.content = selectedLanguage === 'en'
+                ? translations.en.pageDescription
+                : originalPageDescription;
+        }
+        if (openGraphTitle) {
+            openGraphTitle.content = selectedLanguage === 'en'
+                ? translations.en.pageTitle
+                : originalOpenGraphTitle;
+        }
+        if (openGraphDescription) {
+            openGraphDescription.content = selectedLanguage === 'en'
+                ? translations.en.pageDescription
+                : originalOpenGraphDescription;
+        }
         const cvFile = selectedLanguage === 'en'
             ? 'CV_Ayoub_Addichane_AI_Engineer.pdf'
             : 'CV_Ayoub_Addichane_Ing%C3%A9nieur_IA.pdf';
@@ -167,16 +247,6 @@
             if (!element) return;
             if (!element.dataset.originalText) element.dataset.originalText = element.textContent;
             element.textContent = selectedLanguage === 'en' ? translations.en[replacements[selector]] : element.dataset.originalText;
-        });
-        const skillCards = document.querySelectorAll('#skills .content-card');
-        [['skillAi', 'skillAiText'], ['skillWeb', 'skillWebText'], ['skillData', 'skillDataText']].forEach(function (keys, index) {
-            if (!skillCards[index]) return;
-            ['h3', 'p'].forEach(function (tag, itemIndex) {
-                const element = skillCards[index].querySelector(tag);
-                if (!element.dataset.originalText) element.dataset.originalText = element.textContent;
-                const translationKey = keys[itemIndex];
-                element.textContent = selectedLanguage === 'en' ? translations.en[translationKey] : element.dataset.originalText;
-            });
         });
         languageButtons.forEach(function (button) {
             button.setAttribute('aria-pressed', String(button.dataset.language === selectedLanguage));
