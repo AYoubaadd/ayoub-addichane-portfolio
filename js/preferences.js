@@ -59,6 +59,8 @@
             galleryEducationAdminCards: 'Admin portal · Card assignment',
             galleryEducationRfid: 'RFID card reader',
             heroKicker: 'Artificial Intelligence Engineer · Morocco',
+            heroPhotoLabel: "Ayoub Addichane's profile photo",
+            heroTechnologies: 'Key technologies',
             heroTitle: 'I build intelligent systems that serve the real world.',
             heroSummary: 'Ayoub Addichane — applied AI, computer vision, and full-stack development.',
             heroProjects: 'Explore projects', heroJourney: 'My background', heroCv: 'Download my CV',
@@ -89,10 +91,21 @@
             projectWsiTitle: 'LIMS prototype and WSI viewer',
             projectWsiOrganization: 'DataPathology · February – June 2026',
             projectWsiDescription: 'Designed a laboratory management prototype and a viewer for exploring digitized slides. Integrated an AI model to automatically assess image quality.',
+            projectImpactLabel: 'Impact',
+            projectWsiImpact: 'LIMS prototype and automated quality control for medical images.',
             projectMedicalImage: 'Open the medical diagnosis application screenshot',
             projectMedicalTitle: 'Predictive medical diagnosis',
             projectMedicalOrganization: 'GlyciOne · July – September 2025',
             projectMedicalDescription: 'Developed a web application integrating Machine Learning and Deep Learning models for predictive diagnosis, alongside an OCR module to extract information from medical documents.',
+            projectMedicalImpact: 'Predictive diagnosis application with automated medical data extraction.',
+            projectDetailsLabel: 'View details',
+            projectAttendanceDescription: 'Attendance tracking application using facial recognition, combining face detection and attendance management.',
+            projectAttendanceImpact: 'Automated employee attendance tracking through facial recognition.',
+            projectHrImpact: 'Employee management and automated payslip generation.',
+            projectFinanceDescription: 'Web application for business expense tracking and management, organized around projects and budgets.',
+            projectFinanceImpact: 'Business expenses and projects tracked in one dedicated application.',
+            projectEducationDescription: 'Student attendance application with an admin portal, student profiles, and RFID card reading.',
+            projectEducationImpact: 'Attendance tracking and student cards managed in one place.',
             projectTypeIntroductory: 'Introductory internship',
             projectHrImage: 'Open the employee management application screenshot',
             projectHrTitle: 'Employee and payroll management',
@@ -127,6 +140,7 @@
             skillWebText: 'ASP.NET Core, React, Next.js, NestJS, Laravel, Flask, FastAPI, REST APIs, HTML, CSS, and JavaScript.',
             skillDataText: 'PostgreSQL, MySQL, SQL Server, Oracle, MongoDB, Git, GitHub, Docker, Postman, and Jupyter.',
             journalIntro: 'My professional experience, from most recent to earliest.',
+            journalEyebrow: 'Professional experience',
             journalRoleOne: 'AI Engineer · DataPathology',
             journalDateOne: 'February–June 2026 · 5 months · Casablanca, Morocco',
             journalDescriptionOne: 'Designed and developed a laboratory information management system (LIMS) prototype and a whole-slide imaging (WSI) viewer. Integrated an AI module to automatically assess image quality.',
@@ -162,6 +176,7 @@
             skillCardNineText: 'JWT authentication, roles and permissions, access control, REST API security, and data protection.',
             skillCardTenTitle: 'Soft Skills',
             skillCardTenText: 'Analytical thinking, independence, curiosity, problem-solving, attention to detail, organization, continuous learning, adaptability, creativity, perseverance, teamwork, and communication.',
+            skillGroupDataTitle: 'Data & DevOps',
             lifeIntro: 'My education and academic background.',
             galleryIntro: 'Explore a selection of my projects, organized by area.'
         },
@@ -182,6 +197,7 @@
     const originalOpenGraphDescription = openGraphDescription ? openGraphDescription.content : '';
     const languageButtons = document.querySelectorAll('[data-language]');
     const themeButton = document.querySelector('[data-theme-toggle]');
+    const menuToggle = document.querySelector('.header-menu-toggle');
     const themeLabel = document.querySelector('[data-theme-label]');
     const themeIcon = document.querySelector('[data-theme-icon]');
 
@@ -202,6 +218,12 @@
     function setLanguage(language) {
         const selectedLanguage = language === 'en' ? 'en' : 'fr';
         root.lang = selectedLanguage;
+        if (menuToggle) {
+            menuToggle.setAttribute(
+                'aria-label',
+                selectedLanguage === 'en' ? translations.en.menuOpen : 'Ouvrir le menu'
+            );
+        }
         document.title = selectedLanguage === 'en' ? translations.en.pageTitle : originalPageTitle;
         if (descriptionMeta) {
             descriptionMeta.content = selectedLanguage === 'en'
@@ -239,8 +261,7 @@
                 '#about h2': 'aboutTitle', '#skills h2': 'skillsTitle',
                 '#projects h2': 'projectsTitle', '#certificates h2': 'certificatesTitle',
                 '#journal h2': 'journalTitle', '#life h2': 'lifeTitle', '#gallery h2': 'galleryTitle',
-                '#contact h2': 'contactTitle', '#journal > .row p': 'journalIntro',
-                '#life > .row p': 'lifeIntro', '#gallery > .row p': 'galleryIntro'
+                '#contact h2': 'contactTitle',
         };
         Object.keys(replacements).forEach(function (selector) {
             const element = document.querySelector(selector);

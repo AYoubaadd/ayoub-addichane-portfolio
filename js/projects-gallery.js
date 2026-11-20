@@ -25,6 +25,8 @@
     }
 
     function setupGallery(gallery) {
+        if (gallery.dataset.carouselInitialized === 'true') return;
+        gallery.dataset.carouselInitialized = 'true';
         const figures = Array.from(gallery.querySelectorAll(':scope > figure'));
         if (figures.length <= 3) return;
 
@@ -95,7 +97,7 @@
             const step = stepSize();
             gallery.scrollTo({
                 left: targetIndex * step,
-                behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+                behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
             });
         }
 
@@ -121,14 +123,24 @@
             const firstIndex = firstVisibleIndex();
             const size = pageSize();
             const targetIndex = Math.min(Math.floor(firstIndex / size) * size, figures.length - size);
-            gallery.scrollTo({ left: Math.max(0, targetIndex) * stepSize(), behavior: 'instant' });
+            gallery.scrollTo({ left: Math.max(0, targetIndex) * stepSize(), behavior: 'auto' });
             updateControls();
         });
 
         updateControls();
     }
 
-    projectGalleries.forEach(setupGallery);
+    projectGalleries.forEach(function (gallery) {
+        const details = gallery.closest('details');
+        if (!details) {
+            setupGallery(gallery);
+            return;
+        }
+        details.addEventListener('toggle', function () {
+            if (details.open) setupGallery(gallery);
+        });
+        if (details.open) setupGallery(gallery);
+    });
 
     new MutationObserver(function () {
         projectGalleries.forEach(function (gallery) {

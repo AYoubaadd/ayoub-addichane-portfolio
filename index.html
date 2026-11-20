@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
 
+    <meta charset="utf-8">
     <title>AYOUB ADDICHANE | Ingénieur IA & Génie Informatique</title>
 
     <meta
@@ -38,7 +39,9 @@
         try {
             const savedTheme = localStorage.getItem('portfolio-theme');
             if (savedTheme === 'dark' || savedTheme === 'light') document.documentElement.dataset.theme = savedTheme;
-        } catch (error) {}
+        } catch (error) {
+            document.documentElement.dataset.theme = 'light';
+        }
     </script>
 
     <!-- CSS -->
@@ -50,7 +53,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/projects-gallery.css">
     <link rel="stylesheet" href="css/chatbot.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/redesign.css">
 
     <!-- favicons -->
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> -->
@@ -61,11 +64,6 @@
 </head>
 
 <body id="top">
-
-    <!-- preloader -->
-    <div id="preloader">
-        <div class="spinner" id="spinner"></div>
-    </div>
 
     <!-- header -->
     <header class="s-header">
@@ -85,7 +83,7 @@
                     <li><a class="smoothscroll" href="#skills" data-i18n="navSkills">Compétences</a></li>
                     <li><a class="smoothscroll" href="#projects" data-i18n="navProjects">Projets</a></li>
                     <li><a class="smoothscroll" href="#certificates" data-i18n="navCertificates">Certificats</a></li>
-                    <li><a class="smoothscroll" href="#journal" data-i18n="navJournal">Journal</a></li>
+                    <li><a class="smoothscroll" href="#journal" data-i18n="navJournal">Expérience</a></li>
                     <li><a class="smoothscroll" href="#life" data-i18n="navLife">Formations</a></li>
                     <li><a class="smoothscroll" href="#contact" data-i18n="navContact">Contact</a></li>
                 </ul>
@@ -102,22 +100,7 @@
                 </button>
             </div>
 
-            <nav class="row header-nav-wrap legacy-navigation">
-                <ul class="header-nav">
-                    <li><a class="smoothscroll active-link" href="#hero" title="Intro">Home</a></li>
-                    <li><a class="smoothscroll" href="#about" title="About">À Propos</a></li>
-                    <li><a class="smoothscroll" href="#skills" title="Skills">Compétences</a></li>
-                    <li><a class="smoothscroll" href="#projects" title="Works">Projects</a></li>
-                    <li><a class="smoothscroll" href="#certificates" title="Certificates">Certificats</a></li>
-                    <li><a class="smoothscroll" href="#journal" title="Journal">Journal</a></li>
-                    <li><a class="smoothscroll" href="#life" title="life">Formations</a></li>
-                    <li><a class="smoothscroll" href="#contact" title="Contact us">Contact Me</a></li>
-
-                </ul>
-            </nav>
-
-            <a href="CV_Ayoub_Addichane_Ingénieur_IA.pdf" download data-cv-download data-i18n="downloadCv" class="btn btn--stroke btn--small">Télécharger mon CV</a>
-
+            
         </div>
 
         <button class="header-menu-toggle" type="button" aria-expanded="false" aria-controls="header-content">
@@ -128,103 +111,64 @@
     </header> 
 
     <!-- hero -->
-    <section id="hero" class="s-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+    <main>
+    <section id="hero" class="s-hero target-section">
 
         <div class="row hero-content">
 
             <div class="column large-full">
 
-                <p class="hero-kicker" data-i18n="heroKicker">Ingénieur en intelligence artificielle · Maroc</p>
+                <p class="hero-kicker"><span class="availability-dot" aria-hidden="true"></span><span data-i18n="heroKicker">Ingénieur en intelligence artificielle · Casablanca, Maroc</span></p>
                 <h1 data-i18n="heroTitle">Je construis des systèmes intelligents qui servent le réel.</h1>
                 <p class="hero-summary" data-i18n="heroSummary">AYOUB ADDICHANE, Ingénieur Informatique | Intelligence Artificielle, Machine Learning, Computer Vision & IA Générative | Développement de solutions intelligentes.</p>
                 <div class="hero-actions">
-                    <a class="hero-link hero-link--primary smoothscroll" href="#projects" data-i18n="heroProjects">Découvrir les projets</a>
-                    <a class="hero-link smoothscroll" href="#about" data-i18n="heroJourney">Mon parcours</a>
-                    <a class="hero-link" href="CV_Ayoub_Addichane_Ing%C3%A9nieur_IA.pdf" download data-cv-download data-i18n="heroCv">Télécharger mon CV</a>
+                    <a class="hero-link hero-link--primary smoothscroll" href="#projects" data-i18n="heroProjects">Voir mes projets</a>
+                    <a class="hero-link hero-link--secondary" href="CV_Ayoub_Addichane_Ingénieur_IA.pdf" download data-cv-download data-i18n="heroCv">Télécharger mon CV</a>
                 </div>
 
-                <aside class="hero-visual profile-carousel" role="group" aria-label="Photos de profil">
-                    <img class="is-active" src="images/Mes photo/tswir inw.jpeg" alt="AYOUB ADDICHANE, photo de profil 1" />
-                    <img src="images/Mes photo/tswir inw2.jpeg" alt="AYOUB ADDICHANE, photo de profil 2" aria-hidden="true" />
-                    <img src="images/Mes photo/tswir inw3.jpeg" alt="AYOUB ADDICHANE, photo de profil 3" aria-hidden="true" />
-                    <button style="display: none;" class="profile-carousel__toggle"  aria-label="Mettre en pause le défilement des photos"  ></button>
+                <aside class="hero-visual profile-carousel" role="group" aria-label="Photos de profil d'Ayoub Addichane" data-i18n-aria-label="heroPhotoLabel">
+                    <img class="is-active" src="images/Mes photo/tswir inw.jpeg" alt="Ayoub Addichane, ingénieur en intelligence artificielle à Casablanca" fetchpriority="high" aria-hidden="false" />
+                    <img src="images/Mes photo/tswir inw2.jpeg" alt="Ayoub Addichane lors d'un événement technologique" loading="lazy" aria-hidden="true" />
+                    <img src="images/Mes photo/tswir inw3.jpeg" alt="Portrait d'Ayoub Addichane" loading="lazy" aria-hidden="true" />
                 </aside>
 
-                <ul class="hero-social">
-                    <li>
-                        <a href="https://www.linkedin.com/in/ayoub-addichane" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px">    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"/></svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px">    <path d="M22,3.999c-0.78,0.463-2.345,1.094-3.265,1.276c-0.027,0.007-0.049,0.016-0.075,0.023c-0.813-0.802-1.927-1.299-3.16-1.299 c-2.485,0-4.5,2.015-4.5,4.5c0,0.131-0.011,0.372,0,0.5c-3.353,0-5.905-1.756-7.735-4c-0.199,0.5-0.286,1.29-0.286,2.032 c0,1.401,1.095,2.777,2.8,3.63c-0.314,0.081-0.66,0.139-1.02,0.139c-0.581,0-1.196-0.153-1.759-0.617c0,0.017,0,0.033,0,0.051 c0,1.958,2.078,3.291,3.926,3.662c-0.375,0.221-1.131,0.243-1.5,0.243c-0.26,0-1.18-0.119-1.426-0.165 c0.514,1.605,2.368,2.507,4.135,2.539c-1.382,1.084-2.341,1.486-5.171,1.486H2C3.788,19.145,6.065,20,8.347,20 C15.777,20,20,14.337,20,8.999c0-0.086-0.002-0.266-0.005-0.447C19.995,8.534,20,8.517,20,8.499c0-0.027-0.008-0.053-0.008-0.08 c-0.003-0.136-0.006-0.263-0.009-0.329c0.79-0.57,1.475-1.281,2.017-2.091c-0.725,0.322-1.503,0.538-2.32,0.636 C20.514,6.135,21.699,4.943,22,3.999z"/></svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px">    <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"/></svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px">    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h7.621v-6.961h-2.343v-2.725h2.343V9.309 c0-2.324,1.421-3.591,3.495-3.591c0.699-0.002,1.397,0.034,2.092,0.105v2.43h-1.428c-1.13,0-1.35,0.534-1.35,1.322v1.735h2.7 l-0.351,2.725h-2.365V21H19c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z"/></svg>
-                        </a>
-                    </li>
+                <ul class="hero-tech" aria-label="Technologies principales" data-i18n-aria-label="heroTechnologies">
+                    <li>Python</li><li>IA</li><li>ML &amp; DL</li><li>Computer Vision</li><li>LLM &amp; RAG</li><li>Full Stack</li>
                 </ul>
+               
+                 <ul class="hero-social">
+  <li>
+    <a href="https://www.linkedin.com/in/ayoub-addichane-770ba1282" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"/>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/AYoubaadd" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .322.216.694.825.576C20.565 21.795 24 17.298 24 12.297c0-6.627-5.373-12-12-12"/>
+      </svg>
+    </a>
+  </li>
+  
+  <li>
+    <a href="mailto:addichaneayoub@gmail.com" aria-label="Envoyer un email">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="5" width="18" height="14" rx="2"/>
+        <path d="M3 7l9 6 9-6"/>
+      </svg>
+    </a>
+  </li>
+</ul>
+  
+
+
 
             </div> 
 
         </div>
 
-    </section>
-
-    <section id="about-placeholder" class="target-section">
-        <div class="row"><div class="column large-full"><h2>À Propos</h2></div></div>
-
-    </section>
-
-    <section id="skills-placeholder" class="target-section">
-        <div class="row"><div class="column large-full"><h2>Compétences</h2></div></div>
-
-    </section>
-
-    <!-- portfolio -->
-    <section id="portfolio-preview" class="s-portfolio target-section">
-        
-        <div class="row s-portfolio__header">
-            <div class="column large-6 medium-8 tab-full">
-                <div class="section-intro" data-aos="fade-up">
-                    <h1 class="display-1">
-                        Portfolio
-                    </h1>
-                </div>
-            </div>
-        </div>
-
-        <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
-
-            <div class="column card" data-aos="fade-up" v-for="(portfolio, index) in portfolios" :key="index">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <div class="folio-item__thumb-link">
-                            <img :src="portfolio.imgLink" alt="">
-                        </div>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">{{ portfolio.techStack }}</div>
-                        <h4 class="folio-item__title">{{ portfolio.title }}</h4>
-                    </div>
-                    <div class="folio-item__project-link">
-                        <a :href="portfolio.githubLink" title="GitHub Link" >GitHub Link</a>
-                        |
-                        <a :href="portfolio.projectLink" title="Project Link">Project Link</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        
     </section>
 
     <section id="about" class="target-section content-section">
@@ -271,6 +215,10 @@
                                 <li><span data-i18n="aboutLanguageTamazight">Tamazight</span><span data-i18n="aboutLevelNative">Langue maternelle</span></li>
                             </ul>
                         </div>
+                        <div class="about-profile__section">
+                            <h3 data-i18n="skillCardTenTitle">Compétences personnelles</h3>
+                            <p data-i18n="skillCardTenText">Esprit analytique, autonomie, curiosité, résolution de problèmes, rigueur, organisation, apprentissage, adaptabilité, créativité, persévérance, travail en équipe et communication.</p>
+                        </div>
                     </aside>
                 </div>
             </div>
@@ -293,8 +241,9 @@
                         <div class="skill-card__top"><span class="skill-card__category" data-i18n="skillCategoryOne">IA</span><span class="skill-card__number">01</span></div>
                         <h3 data-i18n="skillCardOneTitle">Intelligence artificielle &amp; Machine Learning</h3>
                         <p data-i18n="skillCardOneText">Python, NumPy, Pandas, Scikit-learn, TensorFlow, Keras, PyTorch, Machine Learning, Deep Learning, régression, classification, clustering, feature engineering, optimisation d'hyperparamètres, Random Forest, XGBoost, SVM, KNN, PCA et Naive Bayes.</p>
+                        <p class="skill-card__subheading" data-i18n="skillCardFiveTitle">Langages de programmation</p>
+                        <p data-i18n="skillCardFiveText">Python, C#, Java, C, C++, JavaScript, TypeScript, PHP, SQL et programmation orientée objet.</p>
                     </article>
-
                     <article class="skill-card">
                         <div class="skill-card__top"><span class="skill-card__category">GenAI</span><span class="skill-card__number">02</span></div>
                         <h3 data-i18n="skillCardTwoTitle">IA générative, LLM &amp; RAG</h3>
@@ -311,42 +260,18 @@
                         <div class="skill-card__top"><span class="skill-card__category">Full Stack</span><span class="skill-card__number">04</span></div>
                         <h3 data-i18n="skillCardFourTitle">Développement Web Full Stack</h3>
                         <p data-i18n="skillCardFourText">C#, ASP.NET Core, Entity Framework, React.js, Next.js, NestJS, Laravel, Flask, FastAPI, PHP, HTML5, CSS3, JavaScript, TypeScript, Tailwind CSS, Bootstrap, API REST, JWT et architecture MVC.</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <div class="skill-card__top"><span class="skill-card__category">Code</span><span class="skill-card__number">05</span></div>
-                        <h3 data-i18n="skillCardFiveTitle">Langages de programmation</h3>
-                        <p data-i18n="skillCardFiveText">Python, C#, Java, C, C++, JavaScript, TypeScript, PHP, SQL et programmation orientée objet.</p>
+                        <p class="skill-card__subheading" data-i18n="skillCardEightTitle">Conception &amp; Méthodologies</p>
+                        <p data-i18n="skillCardEightText">UML, programmation orientée objet, architecture MVC, conception d'API REST, analyse des besoins, résolution de problèmes, tests, documentation et Agile.</p>
+                        <p class="skill-card__subheading" data-i18n="skillCardNineTitle">Sécurité &amp; Gestion des accès</p>
+                        <p data-i18n="skillCardNineText">Authentification JWT, rôles et permissions, contrôle des accès, sécurisation des API REST et protection des données.</p>
                     </article>
 
                     <article class="skill-card">
                         <div class="skill-card__top"><span class="skill-card__category">Data</span><span class="skill-card__number">06</span></div>
-                        <h3 data-i18n="skillCardSixTitle">Bases de données &amp; Ingénierie des données</h3>
+                        <h3 data-i18n="skillGroupDataTitle">Data &amp; DevOps</h3>
                         <p data-i18n="skillCardSixText">PostgreSQL, MySQL, Microsoft SQL Server, Oracle Database, MongoDB, modélisation, SQL avancé, nettoyage des données, prétraitement et préparation de jeux de données.</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <div class="skill-card__top"><span class="skill-card__category">MLOps</span><span class="skill-card__number">07</span></div>
-                        <h3 data-i18n="skillCardSevenTitle">Déploiement, DevOps &amp; MLOps</h3>
+                        <p class="skill-card__subheading" data-i18n="skillCardSevenTitle">Déploiement, DevOps &amp; MLOps</p>
                         <p data-i18n="skillCardSevenText">Git, GitHub, Docker, API de modèles IA, automatisation de pipelines, déploiement de modèles, intégration applicative, Postman, Jupyter Notebook et environnements Python.</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <div class="skill-card__top"><span class="skill-card__category" data-i18n="skillCategoryEight">Conception</span><span class="skill-card__number">08</span></div>
-                        <h3 data-i18n="skillCardEightTitle">Conception &amp; Méthodologies</h3>
-                        <p data-i18n="skillCardEightText">UML, programmation orientée objet, architecture MVC, conception d'API REST, analyse des besoins, résolution de problèmes, tests, documentation et Agile.</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <div class="skill-card__top"><span class="skill-card__category" data-i18n="skillCategoryNine">Sécurité</span><span class="skill-card__number">09</span></div>
-                        <h3 data-i18n="skillCardNineTitle">Sécurité &amp; Gestion des accès</h3>
-                        <p data-i18n="skillCardNineText">Authentification JWT, rôles et permissions, contrôle des accès, sécurisation des API REST et protection des données.</p>
-                    </article>
-
-                    <article class="skill-card skill-card--wide">
-                        <div class="skill-card__top"><span class="skill-card__category">Soft skills</span><span class="skill-card__number">10</span></div>
-                        <h3 data-i18n="skillCardTenTitle">Compétences personnelles</h3>
-                        <p data-i18n="skillCardTenText">Esprit analytique, autonomie, curiosité, résolution de problèmes, rigueur, organisation, apprentissage, adaptabilité, créativité, persévérance, travail en équipe et communication.</p>
                     </article>
                 </div>
             </div>
@@ -365,7 +290,7 @@
                 
 
 <div class="gallery-grid">
-                    <article class="gallery-project gallery-project--featured">
+                    <article class="gallery-project gallery-project--featured project-card">
                         <header class="gallery-project__header">
                             <div>
                                 <p class="gallery-project__category" data-i18n="galleryWsiCategory">IA médicale · Imagerie numérique</p>
@@ -373,6 +298,14 @@
                             </div>
                             <span class="gallery-project__index">01</span>
                         </header>
+                        <div class="project-summary">
+                            <p data-i18n="projectWsiDescription">Conception d'un prototype de gestion de laboratoire et d'un viewer de lames numérisées, avec une évaluation automatique de la qualité des images par IA.</p>
+                            <ul class="project-tags" aria-label="Technologies du projet" data-i18n-aria-label="projectTechLabel"><li>LIMS</li><li>WSI</li><li>IA</li></ul>
+                            <p class="project-impact"><strong data-i18n="projectImpactLabel">Impact</strong><span data-i18n="projectWsiImpact">Prototype LIMS et contrôle qualité automatisé des images médicales.</span></p>
+                        </div>
+                        <figure class="project-cover"><img src="images/screenshots/wsi-viewer1.png" alt="Tableau de bord LIMS avec indicateurs d'activité médicale" loading="lazy"></figure>
+                        <details class="project-details">
+                            <summary data-i18n="projectDetailsLabel">Voir les détails</summary>
                         <div class="gallery-project__images">
                             <figure>
                                 <a class="gallery-image-link" href="images/screenshots/wsi-viewer1.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture du tableau de bord LIMS">
@@ -393,9 +326,10 @@
                                 <figcaption data-i18n="galleryWsiWorkflow">Processus d'imagerie numérique</figcaption>
                             </figure>
                         </div>
+                        </details>
                     </article>
 
-                    <article class="gallery-project">
+                    <article class="gallery-project gallery-project--featured project-card">
                         <header class="gallery-project__header">
                             <div>
                                 <p class="gallery-project__category" data-i18n="galleryMedicalCategory">Intelligence artificielle · Santé</p>
@@ -403,6 +337,14 @@
                             </div>
                             <span class="gallery-project__index">02</span>
                         </header>
+                        <div class="project-summary">
+                            <p data-i18n="projectMedicalDescription">Développement d'une application web de diagnostic prédictif avec des modèles de Machine Learning et de Deep Learning et un module OCR pour les documents médicaux.</p>
+                            <ul class="project-tags" aria-label="Technologies du projet" data-i18n-aria-label="projectTechLabel"><li>ASP.NET</li><li>Machine Learning</li><li>Tesseract OCR</li></ul>
+                            <p class="project-impact"><strong data-i18n="projectImpactLabel">Impact</strong><span data-i18n="projectMedicalImpact">Application de diagnostic prédictif et extraction automatisée de données médicales.</span></p>
+                        </div>
+                        <figure class="project-cover"><img src="images/screenshots/diagnostic médical prédictif1.png" alt="Page d'accueil de l'application de diagnostic médical assisté par IA" loading="lazy"></figure>
+                        <details class="project-details">
+                            <summary data-i18n="projectDetailsLabel">Voir les détails</summary>
                         <div class="gallery-project__images">
                             <figure>
                                 <a class="gallery-image-link" href="images/screenshots/diagnostic médical prédictif1.png" target="_blank" rel="noopener" aria-label="Ouvrir la page d'accueil du diagnostic médical">
@@ -461,9 +403,10 @@
 
 
                         </div>
+                        </details>
                     </article>
 
-                    <article class="gallery-project">
+                    <article class="gallery-project project-card">
                         <header class="gallery-project__header">
                             <div>
                                 <p class="gallery-project__category" data-i18n="galleryAttendanceCategory">Vision par ordinateur · RH</p>
@@ -471,6 +414,14 @@
                             </div>
                             <span class="gallery-project__index">03</span>
                         </header>
+                        <div class="project-summary">
+                            <p data-i18n="projectAttendanceDescription">Application de suivi des présences par reconnaissance faciale, associant détection de visages et gestion des pointages.</p>
+                            <ul class="project-tags" aria-label="Technologies du projet" data-i18n-aria-label="projectTechLabel"><li>Computer Vision</li><li>Reconnaissance faciale</li><li>RH</li></ul>
+                            <p class="project-impact"><strong data-i18n="projectImpactLabel">Impact</strong><span data-i18n="projectAttendanceImpact">Automatisation du pointage des employés par reconnaissance faciale.</span></p>
+                        </div>
+                        <figure class="project-cover"><img src="images/screenshots/DetectionFacial1.png" alt="Reconnaissance faciale en direct avec détection de plusieurs visages" loading="lazy"></figure>
+                        <details class="project-details">
+                            <summary data-i18n="projectDetailsLabel">Voir les détails</summary>
                         <div class="gallery-project__images">
                             <figure>
                                 <a class="gallery-image-link" href="images/screenshots/DetectionFacial1.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la reconnaissance faciale">
@@ -485,9 +436,10 @@
                                 <figcaption data-i18n="galleryAttendanceApp">Application de pointage</figcaption>
                             </figure>
                         </div>
+                        </details>
                     </article>
 
-                    <article class="gallery-project">
+                    <article class="gallery-project project-card">
                         <header class="gallery-project__header">
                             <div>
                                 <p class="gallery-project__category" data-i18n="galleryHrCategory">Développement web · RH</p>
@@ -495,6 +447,14 @@
                             </div>
                             <span class="gallery-project__index">04</span>
                         </header>
+                        <div class="project-summary">
+                            <p data-i18n="projectHrDescription">Application web de gestion des employés avec calcul automatique des bulletins de paie.</p>
+                            <ul class="project-tags" aria-label="Technologies du projet" data-i18n-aria-label="projectTechLabel"><li>Full Stack</li><li>Gestion RH</li><li>Paie</li></ul>
+                            <p class="project-impact"><strong data-i18n="projectImpactLabel">Impact</strong><span data-i18n="projectHrImpact">Gestion des employés et génération automatisée des bulletins de paie.</span></p>
+                        </div>
+                        <figure class="project-cover"><img src="images/screenshots/riracktec1.png" alt="Plateforme web de gestion des employés et des services RH" loading="lazy"></figure>
+                        <details class="project-details">
+                            <summary data-i18n="projectDetailsLabel">Voir les détails</summary>
                         <div class="gallery-project__images">
                             <figure>
                                 <a class="gallery-image-link" href="images/screenshots/riracktec1.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la plateforme de gestion RH">
@@ -524,9 +484,10 @@
                             </figure>
 
                         </div>
+                        </details>
                     </article>
 
-                    <article class="gallery-project">
+                    <article class="gallery-project project-card">
                         <header class="gallery-project__header">
                             <div>
                                 <p class="gallery-project__category" data-i18n="galleryFinanceCategory">Développement web · Finance</p>
@@ -534,6 +495,14 @@
                             </div>
                             <span class="gallery-project__index">05</span>
                         </header>
+                        <div class="project-summary">
+                            <p data-i18n="projectFinanceDescription">Application web de gestion et de suivi des dépenses d'entreprise, organisée autour des projets et des budgets.</p>
+                            <ul class="project-tags" aria-label="Technologies du projet" data-i18n-aria-label="projectTechLabel"><li>Full Stack</li><li>Gestion financière</li><li>Suivi des dépenses</li></ul>
+                            <p class="project-impact"><strong data-i18n="projectImpactLabel">Impact</strong><span data-i18n="projectFinanceImpact">Suivi des dépenses et des projets d'entreprise dans une application dédiée.</span></p>
+                        </div>
+                        <figure class="project-cover"><img src="images/screenshots/GestionDepenses.png" alt="Plateforme de gestion et de suivi des dépenses d'entreprise" loading="lazy"></figure>
+                        <details class="project-details">
+                            <summary data-i18n="projectDetailsLabel">Voir les détails</summary>
                         <div class="gallery-project__images">
                             <figure>
                                 <a class="gallery-image-link" href="images/screenshots/GestionDepenses.png" target="_blank" rel="noopener" aria-label="Ouvrir la capture de la plateforme de suivi des dépenses">
@@ -557,9 +526,10 @@
                                 <figcaption data-i18n="galleryFinanceProjectDetails">Détail d'un projet</figcaption>
                             </figure>
                         </div>
+                        </details>
                     </article>
 
-                    <article class="gallery-project">
+                    <article class="gallery-project project-card">
                         <header class="gallery-project__header">
                             <div>
                                 <p class="gallery-project__category" data-i18n="galleryEducationCategory">Développement web · Éducation</p>
@@ -567,6 +537,15 @@
                             </div>
                             <span class="gallery-project__index">06</span>
                         </header>
+                        <div class="project-summary">
+                            <p data-i18n="projectEducationDescription">Application de gestion des présences étudiantes avec espace administrateur, profils étudiants et lecture de cartes RFID.</p>
+                            <ul class="project-tags" aria-label="Technologies du projet" data-i18n-aria-label="projectTechLabel"><li>Application web</li><li>RFID</li><li>Gestion des présences</li></ul>
+                            <p class="project-impact"><strong data-i18n="projectImpactLabel">Impact</strong><span data-i18n="projectEducationImpact">Gestion du suivi des présences et des cartes étudiantes au même endroit.</span></p>
+                        </div>
+                        <figure class="project-cover"><img src="images/screenshots/page de garde presence.png" alt="Page d'accueil de l'application de suivi de présence étudiante" loading="lazy">
+                        </figure>
+                        <details class="project-details">
+                            <summary data-i18n="projectDetailsLabel">Voir les détails</summary>
                         <div class="gallery-project__images">
 
                             <figure>
@@ -604,6 +583,8 @@
                                 <figcaption data-i18n="galleryEducationRfid">Lecture des cartes RFID</figcaption>
                             </figure>
   
+                        </div>
+                        </details>
                     </article>
 
 
@@ -629,7 +610,7 @@
                         <p data-i18n="certificatesIntro">Une sélection de mes certifications. Faites défiler pour découvrir la suite.</p>
                     </div>
                     <div class="certificates-controls" aria-label="Commandes des certificats" data-i18n-aria-label="certificatesControls">
-                        <span class="certificates-count" data-certificates-count aria-live="polite">01–03 / 14</span>
+                        <span class="certificates-count" data-certificates-count aria-live="polite">01–04 / 25</span>
                         <button class="certificates-arrow" type="button" data-certificates-previous aria-label="Certificats précédents" data-i18n-aria-label="certificatesPrevious" disabled>
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6"/></svg>
                         </button>
@@ -778,28 +759,32 @@
     <section id="journal" class="target-section content-section">
         <div class="row">
             <div class="column large-full">
-                <h2>Journal</h2>
-                <p>Mon parcours professionnel, du plus récent au plus ancien.</p>
+                <header class="experience-heading">
+                    <p class="section-eyebrow" data-i18n="journalEyebrow">Parcours professionnel</p>
+                    <h2 data-i18n="journalTitle">Expérience</h2>
+                    <p data-i18n="journalIntro">Mon parcours professionnel, du plus récent au plus ancien.</p>
+                </header>
 
-                <article>
+                <div class="experience-timeline">
+                <article class="experience-item">
                     <h3 data-i18n="journalRoleOne">Ingénieur IA · DataPathology</h3>
                     <p><em data-i18n="journalDateOne">Février–juin 2026 · 5 mois · Casablanca, Maroc</em></p>
                     <p data-i18n="journalDescriptionOne">Conception et développement d'un prototype de système de gestion de laboratoire (LIMS) et d'un visualiseur de lames histologiques numérisées (WSI). Intégration d'un module d'IA pour évaluer automatiquement la qualité des images.</p>
                 </article>
 
-                <article>
+                <article class="experience-item">
                     <h3 data-i18n="journalRoleTwo">Ingénieur IA · GlyciOne France</h3>
                     <p><em data-i18n="journalDateTwo">Juillet–octobre 2025 · 4 mois · France</em></p>
                     <p data-i18n="journalDescriptionTwo">Développement d'une application web de diagnostic prédictif (Alzheimer, dépression et hypertension) avec ASP.NET, des modèles de Machine Learning et de Deep Learning, ainsi que Tesseract OCR pour extraire des données de documents médicaux.</p>
                 </article>
 
-                <article>
+                <article class="experience-item">
                     <h3 data-i18n="journalRoleThree">Ingénieur logiciel · RIRAKTECH SARL</h3>
                     <p><em data-i18n="journalDateThree">Juillet 2024 · 1 mois · Rabat, Maroc</em></p>
                     <p data-i18n="journalDescriptionThree">Conception, développement et livraison d'une application web de gestion des employés avec calcul automatique des bulletins de paie.</p>
                 </article>
 
-                <article>
+                <article class="experience-item">
                     <h3 data-i18n="journalRoleFour">Géologie et traitement · Groupe Managem (SMI)</h3>
                     <p><em data-i18n="journalDateFour">Août 2022, août 2023 et août–septembre 2024 · 4 mois au total · Tinghir, Maroc</em></p>
                     <p data-i18n="journalDescriptionFour">Travail aux services de géologie et de traitement dans le cadre d'une immersion en entreprise.</p>
@@ -881,7 +866,10 @@
                     </header>
 
                     <a class="contact-email" href="mailto:addichaneayoub@gmail.com">
-                        <span data-i18n="contactEmailLabel">Écrire un email</span>
+                        <span class="contact-email__label">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
+                            <span data-i18n="contactEmailLabel">Écrire un email</span>
+                        </span>
                         <strong>addichaneayoub@gmail.com</strong>
                         <span class="contact-email__arrow" aria-hidden="true">↗</span>
                     </a>
@@ -890,16 +878,31 @@
                 <div class="contact-details">
                     <div class="contact-detail">
                         <p data-i18n="contactPhoneLabel">Téléphone</p>
-                        <a href="tel:+212605644509">+212 6 87 26 57 78</a>
+                        <a class="contact-detail__value" href="tel:+212687265778">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.7 3.5h3l1.5 4-2 1.5a15 15 0 0 0 5.8 5.8l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.7 5.7a2 2 0 0 1 2-2.2Z"/></svg>
+                            +212 6 87 26 57 78
+                        </a>
                     </div>
                     <div class="contact-detail">
                         <p data-i18n="contactLocationLabel">Localisation</p>
-                        <span data-i18n="contactCity">Casablanca, Maroc</span>
+                        <span class="contact-detail__value">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.2"/></svg>
+                            <span data-i18n="contactCity">Casablanca, Maroc</span>
+                        </span>
                     </div>
                     <nav class="contact-socials" aria-label="Profils professionnels" data-i18n-aria-label="contactProfilesLabel">
-                        <a href="https://github.com/AYoubaadd" target="_blank" rel="noopener">GitHub ↗</a>
-                        <a href="https://www.linkedin.com/in/ayoub-addichane-770ba1282" target="_blank" rel="noopener">LinkedIn ↗</a>
-                        <a href="https://www.credly.com/users/ayoub-addichane" target="_blank" rel="noopener">Credly ↗</a>
+                        <a href="https://github.com/AYoubaadd" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.2-6-2.8m12 5v-3.1a2.7 2.7 0 0 0-.8-2.1c2.7-.3 5.6-1.3 5.6-6A4.7 4.7 0 0 0 18.5 7a4.3 4.3 0 0 0-.1-3.1S17.4 3.6 15 5.2a13 13 0 0 0-6 0C6.6 3.6 5.6 3.9 5.6 3.9A4.3 4.3 0 0 0 5.5 7a4.7 4.7 0 0 0-1.3 3.3c0 4.7 2.9 5.7 5.6 6a2.7 2.7 0 0 0-.8 2.1V21"/></svg>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/ayoub-addichane-770ba1282" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4v11H4zM6 4.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM12 20V9h4v1.6A4 4 0 0 1 20 9c2.5 0 3 1.7 3 4.2V20h-4v-6c0-1.4-.2-2.3-1.6-2.3S16 12.8 16 14v6Z"/></svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://www.credly.com/users/ayoub-addichane" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.4 1.4 2.8.2.9 2.7 2 2-.9 2.7.3 2.8-2.5 1.3-1.6 2.3-2.8-.5-2.8.5-1.6-2.3-2.5-1.3.3-2.8-.9-2.7 2-2 .9-2.7 2.8-.2L12 3Z"/><path d="m9 15 2 2 4-4"/></svg>
+                            Credly
+                        </a>
                     </nav>
                 </div>
 
@@ -912,6 +915,7 @@
         </div>
     </section>
     
+    </main>
     <aside class="chatbot" data-chatbot>
         <button class="chatbot-toggle" type="button" data-chatbot-toggle aria-expanded="false" aria-controls="chatbot-panel" aria-label="Ouvrir le chatbot">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H6l-3 2v-6.5a7.5 7.5 0 1 1 17-3Z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></svg>
@@ -951,11 +955,6 @@
     </div>
     
     <!-- JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js" integrity="sha512-Blu6KWaTqestULmtJUTB2mwDFTB/FDRuTHV52Uu5dTFVQZ8YWUq2LuxN/brNEjWAqlHr50oAbxrydsuxoK/mqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
     <script src="js/preferences.js"></script>
     <script src="js/analytics.js"></script>
