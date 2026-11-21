@@ -47,13 +47,15 @@
     <!-- CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+Tifinagh:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css?v=portfolio-redesign-14">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/projects-gallery.css">
     <link rel="stylesheet" href="css/chatbot.css">
     <link rel="stylesheet" href="css/redesign.css">
+    <link rel="stylesheet" href="css/amazigh-identity.css">
+    <link rel="stylesheet" href="css/motion.css">
 
     <!-- favicons -->
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> -->
@@ -120,7 +122,7 @@
 
                 <p class="hero-kicker"><span class="availability-dot" aria-hidden="true"></span><span data-i18n="heroKicker">Ingénieur en intelligence artificielle · Casablanca, Maroc</span></p>
                 <h1 data-i18n="heroTitle">Je construis des systèmes intelligents qui servent le réel.</h1>
-                <p class="hero-summary" data-i18n="heroSummary">AYOUB ADDICHANE, Ingénieur Informatique | Intelligence Artificielle, Machine Learning, Computer Vision & IA Générative | Développement de solutions intelligentes.</p>
+                <p class="hero-summary" data-i18n="heroSummary">Je conçois et développe des solutions intelligentes combinant Machine Learning, Deep Learning, Computer Vision et IA générative, du développement des modèles jusqu'à leur intégration dans des applications concrètes.</p>
                 <div class="hero-actions">
                     <a class="hero-link hero-link--primary smoothscroll" href="#projects" data-i18n="heroProjects">Voir mes projets</a>
                     <a class="hero-link hero-link--secondary" href="CV_Ayoub_Addichane_Ingénieur_IA.pdf" download data-cv-download data-i18n="heroCv">Télécharger mon CV</a>
@@ -134,6 +136,8 @@
 
                 <ul class="hero-tech" aria-label="Technologies principales" data-i18n-aria-label="heroTechnologies">
                     <li>Python</li><li>IA</li><li>ML &amp; DL</li><li>Computer Vision</li><li>LLM &amp; RAG</li><li>Full Stack</li>
+                    <br/>
+                    <li>Freelance</li><li>CDI</li><li>CDD</li>
                 </ul>
                
                  <ul class="hero-social">
@@ -177,20 +181,27 @@
                 <header class="about-heading">
                     <p class="section-eyebrow" data-i18n="aboutEyebrow">Profil professionnel</p>
                     <h2 data-i18n="aboutTitle">À propos</h2>
-                    <p class="about-lead" data-i18n="aboutLead">Ingénieur en informatique, je conçois des solutions numériques qui relient intelligence artificielle et besoins réels.</p>
+                    <span class="amazigh-signature" aria-hidden="true">ⵣ</span>
+                    <p class="about-lead" data-i18n="aboutLead">Ingénieur d'état en génie informatique, je conçois des solutions numériques qui relient intelligence artificielle et besoins réels.</p>
                 </header>
 
                 <div class="about-layout">
                     <div class="about-story">
                         <p data-i18n="aboutStoryOne">
-                            Je m'appelle AYOUB ADDICHANE. Diplômé en génie informatique, je m'intéresse
-                            à l'intelligence artificielle appliquée, à la vision par ordinateur et au développement
-                            d'applications Full Stack.
+                            Ayoub Addichane, ingénieur d'État en Génie
+                                Informatique, passionné par l'intelligence artificielle et
+                                son application à des problématiques concrètes. Je conçois
+                                et développe des solutions combinant Machine Learning,
+                                Deep Learning, Computer Vision et développement Full Stack.
                         </p>
                         <p data-i18n="aboutStoryTwo">
-                            J'ai contribué à des projets mêlant modèles d'IA, applications web et cloud. Je continue
-                            d'explorer les LLM, le RAG et les agents intelligents, avec une approche centrée sur des
-                            solutions utiles, fiables et pensées pour leurs utilisateurs.
+                                    À travers mes expériences et mes projets, j'ai travaillé
+                                    sur le développement de modèles d'IA, leur intégration
+                                    dans des applications et la conception de systèmes
+                                    intelligents répondant à des besoins réels. Je m'intéresse
+                                    particulièrement à l'IA générative, aux LLM, au RAG et
+                                    aux agents intelligents, avec une volonté constante de
+                                    créer des solutions utiles, fiables et évolutives.
                         </p>
                         <div class="about-actions">
                             <a class="about-action about-action--primary smoothscroll" href="#skills" data-i18n="aboutSkillsLink">Découvrir mes compétences</a>
@@ -329,13 +340,28 @@
                         </details>
                     </article>
 
+                    <article class="gallery-project project-card">
+                        <header class="gallery-project__header">
+                            <div>
+                                <p class="gallery-project__category" data-i18n="galleryRagCategory">IA générative · RAG</p>
+                                <h3 data-i18n="galleryRagTitle">Chatbot RAG pour documents internes</h3>
+                            </div>
+                            <span class="gallery-project__index">02</span>
+                        </header>
+                        <div class="project-summary">
+                            <p data-i18n="projectRagDescription">Développement d'un chatbot RAG capable de répondre aux questions sur les documents internes d'une entreprise, avec citations des sources. Le système combine le découpage des documents, la création d'embeddings, la recherche vectorielle et une architecture adaptée.</p>
+                            <ul class="project-tags" aria-label="Technologies du projet" data-i18n-aria-label="projectTechLabel"><li>RAG</li><li>Embeddings</li><li>Recherche vectorielle</li></ul>
+                            <p class="project-impact"><strong data-i18n="projectImpactLabel">Impact</strong><span data-i18n="projectRagImpact">Réponses contextualisées et sourcées à partir des documents internes de l'entreprise.</span></p>
+                        </div>
+                    </article>
+
                     <article class="gallery-project gallery-project--featured project-card">
                         <header class="gallery-project__header">
                             <div>
                                 <p class="gallery-project__category" data-i18n="galleryMedicalCategory">Intelligence artificielle · Santé</p>
                                 <h3 data-i18n="galleryMedicalTitle">Diagnostic médical prédictif</h3>
                             </div>
-                            <span class="gallery-project__index">02</span>
+                            <span class="gallery-project__index">03</span>
                         </header>
                         <div class="project-summary">
                             <p data-i18n="projectMedicalDescription">Développement d'une application web de diagnostic prédictif avec des modèles de Machine Learning et de Deep Learning et un module OCR pour les documents médicaux.</p>
@@ -412,7 +438,7 @@
                                 <p class="gallery-project__category" data-i18n="galleryAttendanceCategory">Vision par ordinateur · RH</p>
                                 <h3 data-i18n="galleryAttendanceTitle">Pointage par reconnaissance faciale</h3>
                             </div>
-                            <span class="gallery-project__index">03</span>
+                            <span class="gallery-project__index">04</span>
                         </header>
                         <div class="project-summary">
                             <p data-i18n="projectAttendanceDescription">Application de suivi des présences par reconnaissance faciale, associant détection de visages et gestion des pointages.</p>
@@ -445,7 +471,7 @@
                                 <p class="gallery-project__category" data-i18n="galleryHrCategory">Développement web · RH</p>
                                 <h3 data-i18n="galleryHrTitle">Gestion des employés</h3>
                             </div>
-                            <span class="gallery-project__index">04</span>
+                            <span class="gallery-project__index">05</span>
                         </header>
                         <div class="project-summary">
                             <p data-i18n="projectHrDescription">Application web de gestion des employés avec calcul automatique des bulletins de paie.</p>
@@ -493,7 +519,7 @@
                                 <p class="gallery-project__category" data-i18n="galleryFinanceCategory">Développement web · Finance</p>
                                 <h3 data-i18n="galleryFinanceTitle">Suivi des dépenses</h3>
                             </div>
-                            <span class="gallery-project__index">05</span>
+                            <span class="gallery-project__index">06</span>
                         </header>
                         <div class="project-summary">
                             <p data-i18n="projectFinanceDescription">Application web de gestion et de suivi des dépenses d'entreprise, organisée autour des projets et des budgets.</p>
@@ -535,7 +561,7 @@
                                 <p class="gallery-project__category" data-i18n="galleryEducationCategory">Développement web · Éducation</p>
                                 <h3 data-i18n="galleryEducationTitle">Suivi de présence</h3>
                             </div>
-                            <span class="gallery-project__index">06</span>
+                            <span class="gallery-project__index">07</span>
                         </header>
                         <div class="project-summary">
                             <p data-i18n="projectEducationDescription">Application de gestion des présences étudiantes avec espace administrateur, profils étudiants et lecture de cartes RFID.</p>
@@ -767,28 +793,79 @@
 
                 <div class="experience-timeline">
                 <article class="experience-item">
-                    <h3 data-i18n="journalRoleOne">Ingénieur IA · DataPathology</h3>
+                    <div class="experience-item__heading">
+                        <img class="experience-item__logo" src="images/logo_Entreprises/logodatapathology.jfif" alt="Logo DataPathology" loading="lazy">
+                        <h3 data-i18n="journalRoleOne">Ingénieur IA · DataPathology</h3>
+                    </div>
                     <p><em data-i18n="journalDateOne">Février–juin 2026 · 5 mois · Casablanca, Maroc</em></p>
-                    <p data-i18n="journalDescriptionOne">Conception et développement d'un prototype de système de gestion de laboratoire (LIMS) et d'un visualiseur de lames histologiques numérisées (WSI). Intégration d'un module d'IA pour évaluer automatiquement la qualité des images.</p>
+                    <p data-i18n="journalDescriptionOne">
+                        <li> Développement d'un système LIMS et d'un viewer de lames histologiques numériques (WSI).</li>
+                        <li> Préparation, analyse et annotation d'un dataset d'images histologiques.</li>
+                        <li> Fine-tuning d'un modèle ResNet-50 pour l'évaluation automatique de la qualité des images.</li>
+                        <li> Développement d'un pipeline d'inférence et d'une API dédiée au modèle.</li>
+                        <li> Automatisation du traitement et conteneurisation des services avec Docker.</li>
+                    </p>
                 </article>
 
                 <article class="experience-item">
-                    <h3 data-i18n="journalRoleTwo">Ingénieur IA · GlyciOne France</h3>
-                    <p><em data-i18n="journalDateTwo">Juillet–octobre 2025 · 4 mois · France</em></p>
-                    <p data-i18n="journalDescriptionTwo">Développement d'une application web de diagnostic prédictif (Alzheimer, dépression et hypertension) avec ASP.NET, des modèles de Machine Learning et de Deep Learning, ainsi que Tesseract OCR pour extraire des données de documents médicaux.</p>
+                    <div class="experience-item__heading">
+                        <img class="experience-item__logo" src="images/logo_Entreprises/logoGlyciOne.png" alt="Logo GlyciOne" loading="lazy">
+                        <h3 data-i18n="journalRoleTwo">Ingénieur IA · GlyciOne France</h3>
+                    </div>
+                    <p><em data-i18n="journalDateTwo">Juillet–octobre 2025 · 4 mois · France (Remote)</em></p>
+                    <p data-i18n="journalDescriptionTwo">  
+                            <li>
+        Conception et développement d'une application web de diagnostic
+        prédictif couvrant plusieurs pathologies : Alzheimer, dépression
+        et hypertension.
+    </li>
+    <li>
+        Développement et intégration de modèles de Machine Learning
+        et Deep Learning pour l'analyse des données médicales et
+        la prédiction des risques.
+    </li>
+    <li>
+        Implémentation d'un module OCR basé sur Tesseract pour
+        l'extraction et la structuration automatique des informations
+        issues de documents médicaux.
+    </li>
+    <li>
+        Développement du backend avec ASP.NET pour assurer le
+        traitement des données et l'intégration des fonctionnalités
+        intelligentes.
+    </li>
+                    </p>
                 </article>
 
                 <article class="experience-item">
-                    <h3 data-i18n="journalRoleThree">Ingénieur logiciel · RIRAKTECH SARL</h3>
+                    <div class="experience-item__heading">
+                        <img class="experience-item__logo" src="images/logo_Entreprises/logoRirakTech.jfif" alt="Logo RIRAKTECH" loading="lazy">
+                        <h3 data-i18n="journalRoleThree">Ingénieur logiciel · RIRAKTECH SARL</h3>
+                    </div>
                     <p><em data-i18n="journalDateThree">Juillet 2024 · 1 mois · Rabat, Maroc</em></p>
-                    <p data-i18n="journalDescriptionThree">Conception, développement et livraison d'une application web de gestion des employés avec calcul automatique des bulletins de paie.</p>
-                </article>
+                    <p data-i18n="journalDescriptionThree">
+                         <li>Analyse des besoins et conception d'une application web de gestion des employés.</li>
+                       <li>Développement des fonctionnalités de gestion des employés et de suivi des informations administratives.</li>
+                       <li>Implémentation d'un module de calcul automatisé des salaires et de génération des bulletins de paie.</li>
+                          <li>Développement et livraison d'une solution visant à simplifier et automatiser les tâches administratives.</li>
+
+                    </article>
 
                 <article class="experience-item">
-                    <h3 data-i18n="journalRoleFour">Géologie et traitement · Groupe Managem (SMI)</h3>
-                    <p><em data-i18n="journalDateFour">Août 2022, août 2023 et août–septembre 2024 · 4 mois au total · Tinghir, Maroc</em></p>
-                    <p data-i18n="journalDescriptionFour">Travail aux services de géologie et de traitement dans le cadre d'une immersion en entreprise.</p>
-                </article>
+                    <div class="experience-item__heading">
+                        <img class="experience-item__logo" src="images/logo_Entreprises/logomanagem.jfif" alt="Logo Groupe Managem" loading="lazy">
+                        <h3 data-i18n="journalRoleFour">Géologie et traitement · Groupe Managem (SMI)</h3>
+                    </div>
+                    <p><em data-i18n="journalDateFour">Août 2022, août 2023 et août–septembre 2024 ·
+                                                         4 mois au total · Tinghir, Maroc</em></p>
+                    <p data-i18n="journalDescriptionFour">
+                        <li>Première expérience professionnelle en milieu industriel au sein des services de géologie et de traitement.</li>
+                        <li>Participation aux activités opérationnelles dans un environnement industriel exigeant.</li>
+                        <li>Développement du sens de la discipline, de la ponctualité et du travail en équipe.</li>
+                        <li>Apprentissage du respect des procédures internes, du droit du travail et des normes de santé et de sécurité au travail (HSE).</li>
+                        <li>Adaptation aux exigences du milieu professionnel et respect des consignes et responsabilités confiées.</li>
+ 
+                    </article>
             </div>
         </div>
     </section>
@@ -907,7 +984,7 @@
                 </div>
 
                 <footer class="contact-footer">
-                    <span>© 2026 AYOUB ADDICHANE</span>
+                    <span>© 2026 AYOUB ADDICHANE <span class="amazigh-footer-mark" aria-hidden="true">ⵣ</span></span>
                     <span class="visitor-count" data-analytics-visitors aria-live="polite" aria-atomic="true">Visiteurs uniques : chargement…</span>
                     <span data-i18n="contactFooterNote">Conçu avec précision et curiosité.</span>
                 </footer>
@@ -963,3 +1040,7 @@
 
 </body>
 </html>
+
+
+
+

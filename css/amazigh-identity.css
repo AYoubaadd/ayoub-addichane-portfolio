@@ -1,0 +1,224 @@
+:root {
+  --amazigh-terracotta: #a63d40;
+  --amazigh-ochre: #c47a36;
+  --amazigh-sand: #d8c3a5;
+  --amazigh-charcoal: #242424;
+  --amazigh-blue: #173b57;
+}
+
+.s-hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.s-hero::after {
+  position: absolute;
+  z-index: -1;
+  top: 10%;
+  right: 2%;
+  width: min(38vw, 48rem);
+  aspect-ratio: 1;
+  background: url("../images/amazigh-pattern.svg") center / 12rem 12rem repeat;
+  content: "";
+  opacity: 0.13;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse, #000 15%, transparent 75%);
+  mask-image: radial-gradient(ellipse, #000 15%, transparent 75%);
+}
+
+.content-section {
+  position: relative;
+}
+
+#about::before,
+#skills::before,
+#projects::before,
+#certificates::before,
+#journal::before,
+#life::before,
+#contact::before {
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  width: min(14rem, 40vw);
+  height: 2.4rem;
+  background: url("../images/amazigh-pattern.svg") center / 2.4rem 2.4rem repeat-x;
+  content: "";
+  opacity: 0.32;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.about-heading {
+  position: relative;
+}
+
+.amazigh-signature {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  width: 4.4rem;
+  height: 4.4rem;
+  place-items: center;
+  border: 1px solid rgba(196, 122, 54, 0.45);
+  border-radius: 1.2rem;
+  color: var(--amazigh-terracotta);
+  font: 400 2.8rem/1 "Noto Sans Tifinagh", sans-serif;
+}
+
+#projects .gallery-project {
+  position: relative;
+}
+
+#projects .gallery-project::before,
+#projects .gallery-project::after {
+  position: absolute;
+  width: 1.1rem;
+  height: 1.1rem;
+  content: "";
+  pointer-events: none;
+}
+
+#projects .gallery-project::before {
+  top: 0.9rem;
+  left: 0.9rem;
+  border-top: 1px solid rgba(196, 122, 54, 0.6);
+  border-left: 1px solid rgba(196, 122, 54, 0.6);
+}
+
+#projects .gallery-project::after {
+  right: 0.9rem;
+  bottom: 0.9rem;
+  border-right: 1px solid rgba(166, 61, 64, 0.55);
+  border-bottom: 1px solid rgba(166, 61, 64, 0.55);
+}
+
+.amazigh-footer-mark {
+  display: inline-grid;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: 0.5rem;
+  place-items: center;
+  border: 1px solid rgba(196, 122, 54, 0.45);
+  border-radius: 0.7rem;
+  color: var(--amazigh-terracotta);
+  font: 400 1.6rem/1 "Noto Sans Tifinagh", sans-serif;
+  vertical-align: middle;
+}
+
+#about {
+  isolation: isolate;
+}
+
+#about::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, rgba(245, 247, 251, 0.96) 0%, rgba(245, 247, 251, 0.94) 64%, rgba(5, 15, 40, 0.42) 100%),
+    linear-gradient(rgba(5, 15, 40, 0.24), rgba(5, 15, 40, 0.44)),
+    url("../images/Tazerzit-background.webp");
+  background-position: center, center, 32% 42%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+  pointer-events: none;
+}
+
+#about > .row {
+  position: relative;
+  z-index: 1;
+}
+
+#contact {
+  background-image:
+    linear-gradient(to bottom, transparent 58%, var(--color-sage-paper) 100%),
+    radial-gradient(ellipse at 85% 12%, var(--accent-soft), transparent 40%),
+    linear-gradient(90deg, rgba(245, 247, 251, 0.96) 0%, rgba(245, 247, 251, 0.92) 68%, rgba(245, 247, 251, 0.82) 100%),
+    linear-gradient(rgba(5, 15, 40, 0.16), rgba(5, 15, 40, 0.3)),
+    url("../images/Tazerzit-background.webp");
+  background-position: center, center, center, center, 32% 42%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+html[data-theme="dark"] #about::after {
+  background-image:
+    linear-gradient(90deg, rgba(12, 15, 23, 0.94) 0%, rgba(12, 15, 23, 0.92) 64%, rgba(5, 15, 40, 0.4) 100%),
+    linear-gradient(rgba(5, 15, 40, 0.24), rgba(5, 15, 40, 0.44)),
+    url("../images/Tazerzit-background.webp");
+}
+
+html[data-theme="dark"] #contact {
+  background-image:
+    linear-gradient(to bottom, transparent 58%, var(--color-sage-paper) 100%),
+    radial-gradient(ellipse at 85% 12%, var(--accent-soft), transparent 40%),
+    linear-gradient(90deg, rgba(12, 15, 23, 0.94) 0%, rgba(12, 15, 23, 0.9) 68%, rgba(12, 15, 23, 0.78) 100%),
+    linear-gradient(rgba(5, 15, 40, 0.16), rgba(5, 15, 40, 0.3)),
+    url("../images/Tazerzit-background.webp");
+}
+
+html[data-theme="dark"] .amazigh-signature,
+html[data-theme="dark"] .amazigh-footer-mark {
+  color: var(--amazigh-sand);
+}
+
+@media (max-width: 700px) {
+  .s-hero::after {
+    top: 4%;
+    right: -12rem;
+    width: 32rem;
+  }
+
+  #about::after {
+    height: 42rem;
+    background-image:
+      linear-gradient(90deg, rgba(245, 247, 251, 0.96) 0%, rgba(245, 247, 251, 0.94) 68%, rgba(245, 247, 251, 0.82) 100%),
+      linear-gradient(rgba(5, 15, 40, 0.2), rgba(5, 15, 40, 0.38)),
+      url("../images/Tazerzit-background.webp");
+    background-position: center, center, 55% top;
+    background-size: cover, cover, auto 42rem;
+    -webkit-mask-image: linear-gradient(to bottom, #000 68%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 68%, transparent 100%);
+  }
+
+  html[data-theme="dark"] #about::after {
+    background-image:
+      linear-gradient(90deg, rgba(12, 15, 23, 0.94) 0%, rgba(12, 15, 23, 0.92) 68%, rgba(12, 15, 23, 0.78) 100%),
+      linear-gradient(rgba(5, 15, 40, 0.2), rgba(5, 15, 40, 0.38)),
+      url("../images/Tazerzit-background.webp");
+  }
+
+  #contact {
+    background-position: center, center, center, center, 55% top;
+    background-size: cover, cover, cover, cover, auto 42rem;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  #about::after {
+    height: 48rem;
+    background-image:
+      linear-gradient(90deg, rgba(245, 247, 251, 0.96) 0%, rgba(245, 247, 251, 0.94) 70%, rgba(245, 247, 251, 0.82) 100%),
+      linear-gradient(rgba(5, 15, 40, 0.2), rgba(5, 15, 40, 0.38)),
+      url("../images/Tazerzit-background.webp");
+    background-position: center, center, 20% top;
+    background-size: cover, cover, auto 48rem;
+    -webkit-mask-image: linear-gradient(to bottom, #000 68%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 68%, transparent 100%);
+  }
+
+  html[data-theme="dark"] #about::after {
+    background-image:
+      linear-gradient(90deg, rgba(12, 15, 23, 0.94) 0%, rgba(12, 15, 23, 0.92) 70%, rgba(12, 15, 23, 0.78) 100%),
+      linear-gradient(rgba(5, 15, 40, 0.2), rgba(5, 15, 40, 0.38)),
+      url("../images/Tazerzit-background.webp");
+  }
+
+  #contact {
+    background-position: center, center, center, center, 20% top;
+    background-size: cover, cover, cover, cover, auto 48rem;
+  }
+}
+

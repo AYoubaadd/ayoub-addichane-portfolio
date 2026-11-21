@@ -1048,6 +1048,28 @@ summary:focus-visible,
   font-size: 2rem;
 }
 
+.experience-item__heading {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-item__heading h3 {
+  margin: 0 !important;
+}
+
+.experience-item__logo {
+  display: block;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 12rem;
+  height: 4.4rem;
+  margin: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
 .experience-item p {
   margin: 0.45rem 0 0;
   font-size: 1.35rem;

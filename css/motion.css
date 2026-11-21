@@ -1,0 +1,179 @@
+/* Motion layer: content remains visible unless the existing JS opts in. */
+@keyframes motion-enter-up {
+  from { opacity: 0; transform: translate3d(0, 1.2rem, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes motion-pattern-drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -0.7rem, 0); }
+}
+
+@keyframes motion-symbol-in {
+  from { opacity: 0; transform: translateY(0.5rem) rotate(-8deg); }
+  to { opacity: 1; transform: translateY(0) rotate(0); }
+}
+
+@keyframes motion-about-depth {
+  from { transform: translateY(1.5%); }
+  to { transform: translateY(-1.5%); }
+}
+
+html.motion-ready .s-hero .hero-kicker,
+html.motion-ready .s-hero h1,
+html.motion-ready .s-hero .hero-summary,
+html.motion-ready .s-hero .hero-actions,
+html.motion-ready .s-hero .hero-visual,
+html.motion-ready .s-hero .hero-tech,
+html.motion-ready .s-hero .hero-social {
+  animation: motion-enter-up 560ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+html.motion-ready .s-hero h1 { animation-delay: 70ms; }
+html.motion-ready .s-hero .hero-summary { animation-delay: 140ms; }
+html.motion-ready .s-hero .hero-actions { animation-delay: 210ms; }
+html.motion-ready .s-hero .hero-visual { animation-delay: 280ms; }
+html.motion-ready .s-hero .hero-tech { animation-delay: 350ms; }
+html.motion-ready .s-hero .hero-social { animation-delay: 420ms; }
+
+html.motion-ready .s-hero::after {
+  animation: motion-pattern-drift 12s ease-in-out infinite;
+}
+
+html.motion-ready .amazigh-signature {
+  animation: motion-symbol-in 520ms 260ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  transition: box-shadow 240ms ease, border-color 240ms ease;
+}
+
+.amazigh-signature:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 1.8rem var(--accent-soft);
+}
+
+.experience-item {
+  transition: opacity 480ms ease, transform 480ms ease, border-color 240ms ease, box-shadow 240ms ease;
+}
+
+.experience-item:hover {
+  border-color: var(--accent) !important;
+  box-shadow: 0 1rem 3rem var(--accent-soft);
+  transform: translateY(-2px);
+}
+
+html.motion-ready .experience-timeline::before {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+html.motion-ready .experience-timeline.is-visible::before {
+  transform: scaleY(1);
+}
+
+.skill-card,
+.certificate-card,
+.gallery-project {
+  transition-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.skill-card:hover,
+.certificate-card:hover {
+  box-shadow: 0 1rem 3.2rem var(--accent-soft);
+}
+
+.skills-grid .skill-card.reveal:not(.is-visible):nth-child(2),
+.gallery-grid .gallery-project.reveal:not(.is-visible):nth-child(2),
+.certificates-track .certificate-card.reveal:not(.is-visible):nth-child(2),
+.experience-timeline .experience-item.reveal:not(.is-visible):nth-child(2) { transition-delay: 70ms; }
+
+.skills-grid .skill-card.reveal:not(.is-visible):nth-child(3),
+.gallery-grid .gallery-project.reveal:not(.is-visible):nth-child(3),
+.certificates-track .certificate-card.reveal:not(.is-visible):nth-child(3),
+.experience-timeline .experience-item.reveal:not(.is-visible):nth-child(3) { transition-delay: 140ms; }
+
+.skills-grid .skill-card.reveal:not(.is-visible):nth-child(4),
+.gallery-grid .gallery-project.reveal:not(.is-visible):nth-child(4),
+.certificates-track .certificate-card.reveal:not(.is-visible):nth-child(4),
+.experience-timeline .experience-item.reveal:not(.is-visible):nth-child(4) { transition-delay: 210ms; }
+
+.skills-grid .skill-card.reveal:not(.is-visible):nth-child(n + 5),
+.gallery-grid .gallery-project.reveal:not(.is-visible):nth-child(n + 5),
+.certificates-track .certificate-card.reveal:not(.is-visible):nth-child(n + 5),
+.experience-timeline .experience-item.reveal:not(.is-visible):nth-child(n + 5) { transition-delay: 260ms; }
+
+.hero-link,
+.about-action,
+.contact-layout a,
+.contact-socials a,
+.hero-social a {
+  transition: color 220ms ease, background-color 220ms ease, border-color 220ms ease,
+    box-shadow 220ms ease, transform 220ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.hero-link:hover,
+.about-action:hover,
+.contact-layout a:hover,
+.contact-socials a:hover,
+.hero-social a:hover {
+  transform: translateY(-2px);
+}
+
+.contact-socials svg,
+.hero-social svg {
+  transition: transform 220ms ease;
+}
+
+.contact-socials a:hover svg,
+.hero-social a:hover svg {
+  transform: scale(1.08);
+}
+
+@supports (animation-timeline: view()) {
+  @media (min-width: 701px) and (pointer: fine) {
+    #about::after {
+      animation: motion-about-depth linear both;
+      animation-timeline: view();
+      animation-range: entry 0% exit 100%;
+    }
+  }
+}
+
+@media (max-width: 700px), (pointer: coarse) {
+  html.motion-ready .s-hero::after { animation: none; }
+  #about::after { animation: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.motion-ready .s-hero *,
+  html.motion-ready .s-hero::after,
+  html.motion-ready .amazigh-signature {
+    animation: none !important;
+  }
+
+  #about::after { animation: none !important; }
+
+  html.motion-ready .experience-timeline::before {
+    transform: none;
+    transition: none;
+  }
+
+  .experience-item:hover,
+  .skill-card:hover,
+  .certificate-card:hover,
+  .gallery-project:hover,
+  .hero-link:hover,
+  .about-action:hover,
+  .contact-layout a:hover,
+  .contact-socials a:hover,
+  .hero-social a:hover,
+  .contact-socials a:hover svg,
+  .hero-social a:hover svg {
+    transform: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+  }
+}

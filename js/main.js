@@ -7,6 +7,11 @@
     const menuLinks = document.querySelectorAll('.header-nav a, [data-cv-download]');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+    // The class is only added after JS runs so content stays visible without it.
+    if (!reducedMotion.matches && 'IntersectionObserver' in window) {
+        document.documentElement.classList.add('motion-ready');
+    }
+
     function setMenuOpen(isOpen) {
         document.body.classList.toggle('menu-is-open', isOpen);
         if (menuToggle) {
@@ -100,10 +105,28 @@
                 observer.unobserve(entry.target);
             });
         }, { threshold: 0.12 });
-        document.querySelectorAll('.content-section .skill-card, .content-section .gallery-project, .experience-item, .education-item, .certificate-card').forEach(function (element) {
+        document.querySelectorAll([
+            '.content-section header .section-eyebrow',
+            '.content-section header h2',
+            '.content-section header > p:not(.section-eyebrow)',
+            '.about-story', '.about-profile',
+            '.content-section .skill-card', '.content-section .gallery-project',
+            '.experience-item', '.education-item', '.certificate-card',
+            '.contact-layout > *', '.contact-footer'
+        ].join(',')).forEach(function (element) {
             element.classList.add('reveal');
             revealObserver.observe(element);
         });
+
+        const timeline = document.querySelector('.experience-timeline');
+        if (timeline) {
+            const timelineObserver = new IntersectionObserver(function (entries, observer) {
+                if (!entries.some(function (entry) { return entry.isIntersecting; })) return;
+                timeline.classList.add('is-visible');
+                observer.disconnect();
+            }, { threshold: 0.1 });
+            timelineObserver.observe(timeline);
+        }
     }
 
     const profileCarousel = document.querySelector('.profile-carousel');
