@@ -1080,6 +1080,107 @@ summary:focus-visible,
   font-weight: 600;
 }
 
+.experience-item__details {
+  margin: 1.2rem 0 0;
+  padding: 0 0 0 1.8rem;
+  color: var(--text-muted);
+  font-size: 1.35rem;
+  line-height: 1.75;
+}
+
+.experience-item__details li {
+  margin: 0.35rem 0;
+  padding-left: 0.35rem;
+}
+
+.experience-item__details li::marker {
+  color: var(--accent);
+}
+
+.experience-stack {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-top: 1.6rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+}
+
+.experience-stack__label {
+  flex: 0 0 auto;
+  margin-top: 0.55rem;
+  color: var(--text);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.experience-stack__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-stack__list li {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.8rem;
+  margin: 0;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--line));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 0.35rem 1.2rem rgba(15, 23, 42, 0.04);
+}
+
+.experience-stack__list li::before {
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-right: 0.55rem;
+  border-radius: 50%;
+  background: var(--accent);
+  content: "";
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.experience-stack__list--domains li {
+  border-color: color-mix(in srgb, var(--accent-secondary, var(--accent)) 28%, var(--line));
+  background: color-mix(in srgb, var(--accent-secondary, var(--accent)) 7%, var(--surface));
+}
+
+@media screen and (max-width: 600px) {
+  .experience-stack {
+    display: block;
+  }
+
+  .experience-stack__label {
+    display: block;
+    margin: 0 0 0.9rem;
+  }
+
+  .experience-stack__list {
+    gap: 0.55rem;
+  }
+
+  .experience-stack__list li {
+    min-height: 2.6rem;
+    padding: 0.4rem 0.75rem;
+    font-size: 1rem;
+  }
+}
+
 .education-layout {
   align-items: start;
   gap: 3rem;

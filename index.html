@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
 
@@ -311,7 +311,13 @@
                         </header>
                         <div class="project-summary">
                             <p data-i18n="projectWsiDescription">Conception d'un prototype de gestion de laboratoire et d'un viewer de lames numérisées, avec une évaluation automatique de la qualité des images par IA.</p>
-                            <ul class="project-tags" aria-label="Technologies du projet" data-i18n-aria-label="projectTechLabel"><li>LIMS</li><li>WSI</li><li>IA</li></ul>
+                            <div class="experience-stack" aria-label="Stack technique" data-i18n-aria-label="experienceStackAria">
+                        
+                        <ul class="experience-stack__list">
+                            <li>Python</li><li>OpenSlide</li><li>Deep Learning</li><li>Computer Vision</li>
+                            <li>ResNet-50</li><li>PyTorch</li><li>TensorFlow</li><li>Docker</li><li>LIMS</li><li>WSI</li>
+                        </ul>
+                    </div>
                             <p class="project-impact"><strong data-i18n="projectImpactLabel">Impact</strong><span data-i18n="projectWsiImpact">Prototype LIMS et contrôle qualité automatisé des images médicales.</span></p>
                         </div>
                         <figure class="project-cover"><img src="images/screenshots/wsi-viewer1.png" alt="Tableau de bord LIMS avec indicateurs d'activité médicale" loading="lazy"></figure>
@@ -365,7 +371,13 @@
                         </header>
                         <div class="project-summary">
                             <p data-i18n="projectMedicalDescription">Développement d'une application web de diagnostic prédictif avec des modèles de Machine Learning et de Deep Learning et un module OCR pour les documents médicaux.</p>
-                            <ul class="project-tags" aria-label="Technologies du projet" data-i18n-aria-label="projectTechLabel"><li>ASP.NET</li><li>Machine Learning</li><li>Tesseract OCR</li></ul>
+                            <div class="experience-stack" aria-label="Stack technique" data-i18n-aria-label="experienceStackAria">
+                       
+                        <ul class="experience-stack__list">
+                            <li>ASP.NET</li><li>Python</li><li>Machine Learning</li><li>Deep Learning</li>
+                            <li>Tesseract OCR</li><li>Docker</li>
+                        </ul>
+                    </div>
                             <p class="project-impact"><strong data-i18n="projectImpactLabel">Impact</strong><span data-i18n="projectMedicalImpact">Application de diagnostic prédictif et extraction automatisée de données médicales.</span></p>
                         </div>
                         <figure class="project-cover"><img src="images/screenshots/diagnostic médical prédictif1.png" alt="Page d'accueil de l'application de diagnostic médical assisté par IA" loading="lazy"></figure>
@@ -475,9 +487,15 @@
                         </header>
                         <div class="project-summary">
                             <p data-i18n="projectHrDescription">Application web de gestion des employés avec calcul automatique des bulletins de paie.</p>
-                            <ul class="project-tags" aria-label="Technologies du projet" data-i18n-aria-label="projectTechLabel"><li>Full Stack</li><li>Gestion RH</li><li>Paie</li></ul>
+                            <div class="experience-stack" aria-label="Stack technique" data-i18n-aria-label="experienceStackAria">
+                       
+                            <ul class="experience-stack__list">
+                                <li>PHP</li><li>Laravel</li><li>Blade</li><li>MySQL</li><li>Git</li><li>GitHub</li>
+                            </ul>
+                        </div>
                             <p class="project-impact"><strong data-i18n="projectImpactLabel">Impact</strong><span data-i18n="projectHrImpact">Gestion des employés et génération automatisée des bulletins de paie.</span></p>
                         </div>
+                        PHP · Laravel · Blade · MySQL · Git · GitHub
                         <figure class="project-cover"><img src="images/screenshots/riracktec1.png" alt="Plateforme web de gestion des employés et des services RH" loading="lazy"></figure>
                         <details class="project-details">
                             <summary data-i18n="projectDetailsLabel">Voir les détails</summary>
@@ -798,13 +816,14 @@
                         <h3 data-i18n="journalRoleOne">Ingénieur IA · DataPathology</h3>
                     </div>
                     <p><em data-i18n="journalDateOne">Février–juin 2026 · 5 mois · Casablanca, Maroc</em></p>
-                    <p data-i18n="journalDescriptionOne">
-                        <li> Développement d'un système LIMS et d'un viewer de lames histologiques numériques (WSI).</li>
-                        <li> Préparation, analyse et annotation d'un dataset d'images histologiques.</li>
-                        <li> Fine-tuning d'un modèle ResNet-50 pour l'évaluation automatique de la qualité des images.</li>
-                        <li> Développement d'un pipeline d'inférence et d'une API dédiée au modèle.</li>
-                        <li> Automatisation du traitement et conteneurisation des services avec Docker.</li>
-                    </p>
+                    <ul class="experience-item__details">
+                        <li data-i18n="journalDetailOneA">Développement d'un système LIMS et d'un viewer de lames histologiques numériques (WSI).</li>
+                        <li data-i18n="journalDetailOneB">Préparation, analyse et annotation d'un dataset d'images histologiques.</li>
+                        <li data-i18n="journalDetailOneC">Fine-tuning d'un modèle ResNet-50 pour l'évaluation automatique de la qualité des images.</li>
+                        <li data-i18n="journalDetailOneD">Développement d'un pipeline d'inférence et d'une API dédiée au modèle.</li>
+                        <li data-i18n="journalDetailOneE">Automatisation du traitement et conteneurisation des services avec Docker.</li>
+                    </ul>
+                    
                 </article>
 
                 <article class="experience-item">
@@ -813,28 +832,13 @@
                         <h3 data-i18n="journalRoleTwo">Ingénieur IA · GlyciOne France</h3>
                     </div>
                     <p><em data-i18n="journalDateTwo">Juillet–octobre 2025 · 4 mois · France (Remote)</em></p>
-                    <p data-i18n="journalDescriptionTwo">  
-                            <li>
-        Conception et développement d'une application web de diagnostic
-        prédictif couvrant plusieurs pathologies : Alzheimer, dépression
-        et hypertension.
-    </li>
-    <li>
-        Développement et intégration de modèles de Machine Learning
-        et Deep Learning pour l'analyse des données médicales et
-        la prédiction des risques.
-    </li>
-    <li>
-        Implémentation d'un module OCR basé sur Tesseract pour
-        l'extraction et la structuration automatique des informations
-        issues de documents médicaux.
-    </li>
-    <li>
-        Développement du backend avec ASP.NET pour assurer le
-        traitement des données et l'intégration des fonctionnalités
-        intelligentes.
-    </li>
-                    </p>
+                    <ul class="experience-item__details">
+                        <li data-i18n="journalDetailTwoA">Conception et développement d'une application web de diagnostic prédictif couvrant plusieurs pathologies : Alzheimer, dépression et hypertension.</li>
+                        <li data-i18n="journalDetailTwoB">Développement et intégration de modèles de Machine Learning et Deep Learning pour l'analyse des données médicales et la prédiction des risques.</li>
+                        <li data-i18n="journalDetailTwoC">Implémentation d'un module OCR basé sur Tesseract pour l'extraction et la structuration automatique des informations issues de documents médicaux.</li>
+                        <li data-i18n="journalDetailTwoD">Développement du backend avec ASP.NET pour assurer le traitement des données et l'intégration des fonctionnalités intelligentes.</li>
+                    </ul>
+                    
                 </article>
 
                 <article class="experience-item">
@@ -843,13 +847,14 @@
                         <h3 data-i18n="journalRoleThree">Ingénieur logiciel · RIRAKTECH SARL</h3>
                     </div>
                     <p><em data-i18n="journalDateThree">Juillet 2024 · 1 mois · Rabat, Maroc</em></p>
-                    <p data-i18n="journalDescriptionThree">
-                         <li>Analyse des besoins et conception d'une application web de gestion des employés.</li>
-                       <li>Développement des fonctionnalités de gestion des employés et de suivi des informations administratives.</li>
-                       <li>Implémentation d'un module de calcul automatisé des salaires et de génération des bulletins de paie.</li>
-                          <li>Développement et livraison d'une solution visant à simplifier et automatiser les tâches administratives.</li>
-
-                    </article>
+                    <ul class="experience-item__details">
+                        <li data-i18n="journalDetailThreeA">Analyse des besoins et conception d'une application web de gestion des employés.</li>
+                        <li data-i18n="journalDetailThreeB">Développement des fonctionnalités de gestion des employés et de suivi des informations administratives.</li>
+                        <li data-i18n="journalDetailThreeC">Implémentation d'un module de calcul automatisé des salaires et de génération des bulletins de paie.</li>
+                        <li data-i18n="journalDetailThreeD">Développement et livraison d'une solution visant à simplifier et automatiser les tâches administratives.</li>
+                    </ul>
+                    
+                </article>
 
                 <article class="experience-item">
                     <div class="experience-item__heading">
@@ -858,14 +863,15 @@
                     </div>
                     <p><em data-i18n="journalDateFour">Août 2022, août 2023 et août–septembre 2024 ·
                                                          4 mois au total · Tinghir, Maroc</em></p>
-                    <p data-i18n="journalDescriptionFour">
-                        <li>Première expérience professionnelle en milieu industriel au sein des services de géologie et de traitement.</li>
-                        <li>Participation aux activités opérationnelles dans un environnement industriel exigeant.</li>
-                        <li>Développement du sens de la discipline, de la ponctualité et du travail en équipe.</li>
-                        <li>Apprentissage du respect des procédures internes, du droit du travail et des normes de santé et de sécurité au travail (HSE).</li>
-                        <li>Adaptation aux exigences du milieu professionnel et respect des consignes et responsabilités confiées.</li>
- 
-                    </article>
+                    <ul class="experience-item__details">
+                        <li data-i18n="journalDetailFourA">Première expérience professionnelle en milieu industriel au sein des services de géologie et de traitement.</li>
+                        <li data-i18n="journalDetailFourB">Participation aux activités opérationnelles dans un environnement industriel exigeant.</li>
+                        <li data-i18n="journalDetailFourC">Développement du sens de la discipline, de la ponctualité et du travail en équipe.</li>
+                        <li data-i18n="journalDetailFourD">Apprentissage du respect des procédures internes, du droit du travail et des normes de santé et de sécurité au travail (HSE).</li>
+                        <li data-i18n="journalDetailFourE">Adaptation aux exigences du milieu professionnel et respect des consignes et responsabilités confiées.</li>
+                    </ul>
+                    
+                </article>
             </div>
         </div>
     </section>
@@ -888,7 +894,10 @@
                             <div class="education-item__content">
                                 <p class="education-item__period" data-i18n="educationPeriodOne">Oct. 2023 – Juin 2026</p>
                                 <h3 data-i18n="educationDegreeOne">Ingénieur d'État en Génie Informatique</h3>
-                                <p class="education-item__place" data-i18n="educationPlaceOne">Faculté des Sciences et Techniques · Errachidia</p>
+                                <div class="education-item__institution">
+                                    <img class="education-item__logo" src="images/logoFormations/logoFSTE.jfif" alt="Logo de la Faculté des Sciences et Techniques d'Errachidia" loading="lazy">
+                                    <p class="education-item__place" data-i18n="educationPlaceOne">Faculté des Sciences et Techniques · Errachidia</p>
+                                </div>
                                 <p class="education-item__description" data-i18n="educationDescriptionOne">Spécialisation en intelligence artificielle, génie logiciel et systèmes d'information.</p>
                             </div>
                         </article>
@@ -898,7 +907,10 @@
                             <div class="education-item__content">
                                 <p class="education-item__period" data-i18n="educationPeriodTwo">Sept. 2021 – Juin 2023</p>
                                 <h3 data-i18n="educationDegreeTwo">Bac +2 · Mathématiques, Informatique et Physique</h3>
-                                <p class="education-item__place" data-i18n="educationPlaceTwo">Faculté des Sciences et Techniques · Settat</p>
+                                <div class="education-item__institution">
+                                    <img class="education-item__logo" src="images/logoFormations/logoFSTS.jfif" alt="Logo de la Faculté des Sciences et Techniques de Settat" loading="lazy">
+                                    <p class="education-item__place" data-i18n="educationPlaceTwo">Faculté des Sciences et Techniques · Settat</p>
+                                </div>
                                 <p class="education-item__description" data-i18n="educationDescriptionTwo">Socle scientifique et premiers travaux en programmation, algorithmique et modélisation.</p>
                             </div>
                         </article>

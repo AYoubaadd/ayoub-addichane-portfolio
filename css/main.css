@@ -3065,6 +3065,25 @@ html.ss-loaded .hero-content {
   font-weight: 600;
 }
 
+.education-item__institution {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.education-item__institution .education-item__place {
+  margin-bottom: 0 !important;
+}
+
+.education-item__logo {
+  flex: 0 0 4.8rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 0.8rem;
+  background: #fff;
+  object-fit: contain;
+}
+
 .education-item__description {
   margin-bottom: 0 !important;
   max-width: 64rem;
