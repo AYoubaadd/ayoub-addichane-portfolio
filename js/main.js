@@ -217,6 +217,62 @@
         }
     }
 
+    const projectGrid = document.querySelector('#projects .gallery-grid');
+    const projectToggle = document.querySelector('[data-projects-toggle]');
+    if (projectGrid && projectToggle) {
+        const remainingProjects = Array.from(
+            projectGrid.querySelectorAll(':scope > .gallery-project')
+        ).slice(3);
+        const moreLabel = projectToggle.querySelector('[data-i18n="projectsShowMore"]');
+        const lessLabel = projectToggle.querySelector('[data-i18n="projectsShowLess"]');
+
+        if (remainingProjects.length && moreLabel && lessLabel) {
+            function setProjectsExpanded(expanded) {
+                remainingProjects.forEach(function (project) {
+                    project.hidden = !expanded;
+                });
+                projectToggle.setAttribute('aria-expanded', String(expanded));
+                moreLabel.hidden = expanded;
+                lessLabel.hidden = !expanded;
+            }
+
+            setProjectsExpanded(false);
+            projectToggle.addEventListener('click', function () {
+                setProjectsExpanded(projectToggle.getAttribute('aria-expanded') !== 'true');
+            });
+        } else {
+            projectToggle.hidden = true;
+        }
+    }
+
+    const skillGrid = document.querySelector('#skills .skills-grid');
+    const skillsToggle = document.querySelector('[data-skills-toggle]');
+    if (skillGrid && skillsToggle) {
+        const remainingSkills = Array.from(
+            skillGrid.querySelectorAll(':scope > .skill-card')
+        ).slice(2);
+        const moreLabel = skillsToggle.querySelector('[data-i18n="skillsShowMore"]');
+        const lessLabel = skillsToggle.querySelector('[data-i18n="skillsShowLess"]');
+
+        if (remainingSkills.length && moreLabel && lessLabel) {
+            function setSkillsExpanded(expanded) {
+                remainingSkills.forEach(function (card) {
+                    card.hidden = !expanded;
+                });
+                skillsToggle.setAttribute('aria-expanded', String(expanded));
+                moreLabel.hidden = expanded;
+                lessLabel.hidden = !expanded;
+            }
+
+            setSkillsExpanded(false);
+            skillsToggle.addEventListener('click', function () {
+                setSkillsExpanded(skillsToggle.getAttribute('aria-expanded') !== 'true');
+            });
+        } else {
+            skillsToggle.hidden = true;
+        }
+    }
+
     const backToTop = document.querySelector('.ss-go-top');
     if (backToTop) {
         function updateBackToTop() {

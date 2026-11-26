@@ -87,6 +87,8 @@
             aboutLevelNative: 'Native',
             projectsEyebrow: 'Selected work',
             projectsIntro: 'Real-world experience at the intersection of artificial intelligence, healthcare, and software development.',
+            projectsShowMore: 'Show more projects',
+            projectsShowLess: 'Show fewer projects',
             projectTypeInternship: 'Graduation internship',
             projectTechLabel: 'Technologies used',
             projectWsiImage: 'Open the WSI viewer screenshot',
@@ -130,6 +132,7 @@
             educationPeriodTwo: 'Sept. 2021 – June 2023', educationDegreeTwo: 'Two-year university diploma · Mathematics, Computer Science and Physics', educationPlaceTwo: 'Faculty of Sciences and Technology · Settat', educationDescriptionTwo: 'Scientific foundation and first work in programming, algorithms, and modeling.',
             educationPeriodThree: 'Sept. 2020 – June 2021', educationDegreeThree: 'High school diploma · Physical sciences', educationPlaceThree: 'Almorabitin Qualified High School · Tinghir',
             skillsEyebrow: 'Technical expertise', skillsTitle: 'Skills', skillsIntro: 'Combined strengths in artificial intelligence, software engineering, and teamwork.',
+            skillsShowMore: 'Show more skills', skillsShowLess: 'Show fewer skills',
             galleryTitle: 'Gallery', contactTitle: 'Contact', contactEyebrow: 'Available to collaborate', contactEmailLabel: 'Send an email', contactPhoneLabel: 'Phone', contactLocationLabel: 'Location', contactProfilesLabel: 'Professional profiles', contactFooterNote: 'Designed with precision and curiosity.',
             contactIntro: 'Interested in an AI or full-stack development role?',
             contactCollaboration: 'Have an idea, project, or digital need? I am also open to collaborations to turn your ideas into practical, innovative solutions.',
@@ -241,6 +244,39 @@
         } catch (error) {}
     }
 
+    function splitSkillLabels(text) {
+        return text
+            .replace(/,\s*(?:and|et)\s+/gi, ', ')
+            .replace(/\s+(?:and|et)\s+(?=[^,]+$)/i, ', ')
+            .split(',')
+            .map(function (skill) {
+                return skill.trim().replace(/[.!?]+$/, '');
+            })
+            .filter(Boolean);
+    }
+
+    function renderSkillTags(list, tagClass) {
+        const skills = splitSkillLabels(list.textContent);
+        list.replaceChildren(...skills.map(function (skill) {
+            const tag = document.createElement('span');
+            tag.className = tagClass;
+            tag.setAttribute('role', 'listitem');
+            tag.textContent = skill;
+            return tag;
+        }));
+    }
+
+    function renderAboutSoftSkills() {
+        const skillsList = document.querySelector('#about .about-soft-skills');
+        if (skillsList) renderSkillTags(skillsList, 'about-soft-skill');
+    }
+
+    function renderTechnicalSkills() {
+        document.querySelectorAll('#skills .skill-card__tags').forEach(function (list) {
+            renderSkillTags(list, 'skill-card__tag');
+        });
+    }
+
     function setLanguage(language) {
         const selectedLanguage = language === 'en' ? 'en' : 'fr';
         root.lang = selectedLanguage;
@@ -278,6 +314,8 @@
             if (!element.dataset.originalText) element.dataset.originalText = element.textContent;
             element.textContent = translation || element.dataset.originalText;
         });
+        renderAboutSoftSkills();
+        renderTechnicalSkills();
         document.querySelectorAll('[data-i18n-aria-label]').forEach(function (element) {
             const translation = translations[selectedLanguage][element.dataset.i18nAriaLabel];
             if (!element.dataset.originalAriaLabel) element.dataset.originalAriaLabel = element.getAttribute('aria-label');

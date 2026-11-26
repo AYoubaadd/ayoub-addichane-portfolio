@@ -47,7 +47,7 @@
     <!-- CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+Tifinagh:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+Tifinagh:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css?v=portfolio-redesign-14">
     <link rel="stylesheet" href="css/header.css">
@@ -176,12 +176,19 @@
     </section>
 
     <section id="about" class="target-section content-section">
+        <div class="about-color-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </div>
         <div class="row">
             <div class="column large-full">
                 <header class="about-heading">
-                    <p class="section-eyebrow" data-i18n="aboutEyebrow">Profil professionnel</p>
-                    <h2 data-i18n="aboutTitle">À propos</h2>
-                    <span class="amazigh-signature" aria-hidden="true">ⵣ</span>
+                    <div class="about-heading__identity">
+                        <span class="amazigh-signature" aria-hidden="true">ⵣ</span>
+                        <div>
+                            <p class="section-eyebrow" data-i18n="aboutEyebrow">Profil professionnel</p>
+                            <h2 data-i18n="aboutTitle">À propos</h2>
+                        </div>
+                    </div>
                     <p class="about-lead" data-i18n="aboutLead">Ingénieur d'état en génie informatique, je conçois des solutions numériques qui relient intelligence artificielle et besoins réels.</p>
                 </header>
 
@@ -203,6 +210,15 @@
                                     aux agents intelligents, avec une volonté constante de
                                     créer des solutions utiles, fiables et évolutives.
                         </p>
+                        <div class="about-technology-tags" aria-label="Technologies">
+                            <span>Machine Learning</span>
+                            <span>Deep Learning</span>
+                            <span>Computer Vision</span>
+                            <span>LLM</span>
+                            <span>RAG</span>
+                            <span>AI Agents</span>
+                            <span>Full Stack</span>
+                        </div>
                         <div class="about-actions">
                             <a class="about-action about-action--primary smoothscroll" href="#skills" data-i18n="aboutSkillsLink">Découvrir mes compétences</a>
                         </div>
@@ -212,31 +228,35 @@
                         <div class="about-profile__section">
                             <h3 data-i18n="aboutFocusTitle">Domaines d'intérêt</h3>
                             <ul class="about-focus-list">
-                                <li><span class="about-focus-list__number">01</span><span data-i18n="aboutFocusAi">Intelligence artificielle appliquée</span></li>
-                                <li><span class="about-focus-list__number">02</span><span data-i18n="aboutFocusFullStack">Développement Full Stack</span></li>
-                                <li><span class="about-focus-list__number">03</span><span data-i18n="aboutFocusCloud">Cloud et ingénierie des données</span></li>
+                                <li><span class="about-focus-list__number" aria-hidden="true">01</span><span data-i18n="aboutFocusAi">Intelligence artificielle appliquée</span></li>
+                                <li><span class="about-focus-list__number" aria-hidden="true">02</span><span data-i18n="aboutFocusFullStack">Développement Full Stack</span></li>
+                                <li><span class="about-focus-list__number" aria-hidden="true">03</span><span data-i18n="aboutFocusCloud">Cloud et ingénierie des données</span></li>
                             </ul>
                         </div>
                         <div class="about-profile__section about-languages">
                             <h3 data-i18n="aboutLanguagesTitle">Langues</h3>
                             <ul class="about-language-list">
-                                <li><span data-i18n="aboutLanguageFrench">Français</span><span data-i18n="aboutLevelProfessional">Professionnel</span></li>
-                                <li><span data-i18n="aboutLanguageEnglish">Anglais</span><span data-i18n="aboutLevelProfessional">Professionnel</span></li>
-                                <li><span data-i18n="aboutLanguageArabic">Arabe</span><span data-i18n="aboutLevelNative">Langue maternelle</span></li>
-                                <li><span data-i18n="aboutLanguageTamazight">Tamazight</span><span data-i18n="aboutLevelNative">Langue maternelle</span></li>
+                                <li><span data-i18n="aboutLanguageFrench">Français</span><span class="about-language-level" data-i18n="aboutLevelProfessional">Professionnel</span></li>
+                                <li><span data-i18n="aboutLanguageEnglish">Anglais</span><span class="about-language-level" data-i18n="aboutLevelProfessional">Professionnel</span></li>
+                                <li><span data-i18n="aboutLanguageArabic">Arabe</span><span class="about-language-level about-language-level--native" data-i18n="aboutLevelNative">Langue maternelle</span></li>
+                                <li><span data-i18n="aboutLanguageTamazight">Tamazight</span><span class="about-language-level about-language-level--native" data-i18n="aboutLevelNative">Langue maternelle</span></li>
                             </ul>
                         </div>
-                        <div class="about-profile__section">
-                            <h3 data-i18n="skillCardTenTitle">Compétences personnelles</h3>
-                            <p data-i18n="skillCardTenText">Esprit analytique, autonomie, curiosité, résolution de problèmes, rigueur, organisation, apprentissage, adaptabilité, créativité, persévérance, travail en équipe et communication.</p>
-                        </div>
                     </aside>
+                </div>
+
+                <div class="about-soft-section">
+                    <h3 data-i18n="skillCardTenTitle">Compétences personnelles</h3>
+                    <div class="about-soft-skills" role="list" data-i18n="skillCardTenText">Esprit analytique, autonomie, curiosité, résolution de problèmes, rigueur, organisation, apprentissage, adaptabilité, créativité, persévérance, travail en équipe et communication.</div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="skills" class="target-section content-section">
+        <div class="skills-color-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </div>
         <div class="row">
             <div class="column large-full">
                 <header class="skills-heading">
@@ -247,44 +267,48 @@
                     <p class="skills-intro" data-i18n="skillsIntro">Des compétences combinées en intelligence artificielle, ingénierie logicielle et travail en équipe.</p>
                 </header>
 
-                <div class="skills-grid">
+                <div class="skills-grid" id="skills-grid">
                     <article class="skill-card">
                         <div class="skill-card__top"><span class="skill-card__category" data-i18n="skillCategoryOne">IA</span><span class="skill-card__number">01</span></div>
                         <h3 data-i18n="skillCardOneTitle">Intelligence artificielle &amp; Machine Learning</h3>
-                        <p data-i18n="skillCardOneText">Python, NumPy, Pandas, Scikit-learn, TensorFlow, Keras, PyTorch, Machine Learning, Deep Learning, régression, classification, clustering, feature engineering, optimisation d'hyperparamètres, Random Forest, XGBoost, SVM, KNN, PCA et Naive Bayes.</p>
+                        <div class="skill-card__tags" role="list" data-i18n="skillCardOneText">Python, NumPy, Pandas, Scikit-learn, TensorFlow, Keras, PyTorch, Machine Learning, Deep Learning, régression, classification, clustering, feature engineering, optimisation d'hyperparamètres, Random Forest, XGBoost, SVM, KNN, PCA et Naive Bayes.</div>
                         <p class="skill-card__subheading" data-i18n="skillCardFiveTitle">Langages de programmation</p>
-                        <p data-i18n="skillCardFiveText">Python, C#, Java, C, C++, JavaScript, TypeScript, PHP, SQL et programmation orientée objet.</p>
+                        <div class="skill-card__tags" role="list" data-i18n="skillCardFiveText">Python, C#, Java, C, C++, JavaScript, TypeScript, PHP, SQL et programmation orientée objet.</div>
                     </article>
                     <article class="skill-card">
                         <div class="skill-card__top"><span class="skill-card__category">GenAI</span><span class="skill-card__number">02</span></div>
                         <h3 data-i18n="skillCardTwoTitle">IA générative, LLM &amp; RAG</h3>
-                        <p data-i18n="skillCardTwoText">Large Language Models, Generative AI, Retrieval-Augmented Generation, prompt engineering, embeddings, recherche sémantique, chunking, recherche vectorielle, LangChain, Hugging Face, FAISS, ChromaDB, intégration d'API LLM et chatbots intelligents.</p>
+                        <div class="skill-card__tags" role="list" data-i18n="skillCardTwoText">Large Language Models, Generative AI, Retrieval-Augmented Generation, prompt engineering, embeddings, recherche sémantique, chunking, recherche vectorielle, LangChain, Hugging Face, FAISS, ChromaDB, intégration d'API LLM et chatbots intelligents.</div>
                     </article>
 
-                    <article class="skill-card">
+                    <article class="skill-card" hidden>
                         <div class="skill-card__top"><span class="skill-card__category">Vision</span><span class="skill-card__number">03</span></div>
                         <h3 data-i18n="skillCardThreeTitle">Computer Vision &amp; Traitement d'images</h3>
-                        <p data-i18n="skillCardThreeText">OpenCV, OpenSlide, Tesseract OCR, classification d'images, extraction de patches, analyse d'images médicales, Whole Slide Images, contrôle qualité automatique, fine-tuning de ResNet-50, heatmaps et analyse des résultats.</p>
+                        <div class="skill-card__tags" role="list" data-i18n="skillCardThreeText">OpenCV, OpenSlide, Tesseract OCR, classification d'images, extraction de patches, analyse d'images médicales, Whole Slide Images, contrôle qualité automatique, fine-tuning de ResNet-50, heatmaps et analyse des résultats.</div>
                     </article>
 
-                    <article class="skill-card">
+                    <article class="skill-card" hidden>
                         <div class="skill-card__top"><span class="skill-card__category">Full Stack</span><span class="skill-card__number">04</span></div>
                         <h3 data-i18n="skillCardFourTitle">Développement Web Full Stack</h3>
-                        <p data-i18n="skillCardFourText">C#, ASP.NET Core, Entity Framework, React.js, Next.js, NestJS, Laravel, Flask, FastAPI, PHP, HTML5, CSS3, JavaScript, TypeScript, Tailwind CSS, Bootstrap, API REST, JWT et architecture MVC.</p>
+                        <div class="skill-card__tags" role="list" data-i18n="skillCardFourText">C#, ASP.NET Core, Entity Framework, React.js, Next.js, NestJS, Laravel, Flask, FastAPI, PHP, HTML5, CSS3, JavaScript, TypeScript, Tailwind CSS, Bootstrap, API REST, JWT et architecture MVC.</div>
                         <p class="skill-card__subheading" data-i18n="skillCardEightTitle">Conception &amp; Méthodologies</p>
-                        <p data-i18n="skillCardEightText">UML, programmation orientée objet, architecture MVC, conception d'API REST, analyse des besoins, résolution de problèmes, tests, documentation et Agile.</p>
+                        <div class="skill-card__tags" role="list" data-i18n="skillCardEightText">UML, programmation orientée objet, architecture MVC, conception d'API REST, analyse des besoins, résolution de problèmes, tests, documentation et Agile.</div>
                         <p class="skill-card__subheading" data-i18n="skillCardNineTitle">Sécurité &amp; Gestion des accès</p>
-                        <p data-i18n="skillCardNineText">Authentification JWT, rôles et permissions, contrôle des accès, sécurisation des API REST et protection des données.</p>
+                        <div class="skill-card__tags" role="list" data-i18n="skillCardNineText">Authentification JWT, rôles et permissions, contrôle des accès, sécurisation des API REST et protection des données.</div>
                     </article>
 
-                    <article class="skill-card">
-                        <div class="skill-card__top"><span class="skill-card__category">Data</span><span class="skill-card__number">06</span></div>
+                    <article class="skill-card" hidden>
+                        <div class="skill-card__top"><span class="skill-card__category">Data</span><span class="skill-card__number">05</span></div>
                         <h3 data-i18n="skillGroupDataTitle">Data &amp; DevOps</h3>
-                        <p data-i18n="skillCardSixText">PostgreSQL, MySQL, Microsoft SQL Server, Oracle Database, MongoDB, modélisation, SQL avancé, nettoyage des données, prétraitement et préparation de jeux de données.</p>
+                        <div class="skill-card__tags" role="list" data-i18n="skillCardSixText">PostgreSQL, MySQL, Microsoft SQL Server, Oracle Database, MongoDB, modélisation, SQL avancé, nettoyage des données, prétraitement et préparation de jeux de données.</div>
                         <p class="skill-card__subheading" data-i18n="skillCardSevenTitle">Déploiement, DevOps &amp; MLOps</p>
-                        <p data-i18n="skillCardSevenText">Git, GitHub, Docker, API de modèles IA, automatisation de pipelines, déploiement de modèles, intégration applicative, Postman, Jupyter Notebook et environnements Python.</p>
+                        <div class="skill-card__tags" role="list" data-i18n="skillCardSevenText">Git, GitHub, Docker, API de modèles IA, automatisation de pipelines, déploiement de modèles, intégration applicative, Postman, Jupyter Notebook et environnements Python.</div>
                     </article>
                 </div>
+                <button class="skills-show-more" type="button" data-skills-toggle aria-expanded="false" aria-controls="skills-grid">
+                    <span data-i18n="skillsShowMore">Voir plus de compétences</span>
+                    <span data-i18n="skillsShowLess" hidden>Voir moins de compétences</span>
+                </button>
             </div>
         </div>
     </section>
@@ -300,7 +324,7 @@
 
                 
 
-<div class="gallery-grid">
+<div class="gallery-grid" id="projects-grid">
                     <article class="gallery-project gallery-project--featured project-card">
                         <header class="gallery-project__header">
                             <div>
@@ -444,7 +468,7 @@
                         </details>
                     </article>
 
-                    <article class="gallery-project project-card">
+                    <article class="gallery-project project-card" hidden>
                         <header class="gallery-project__header">
                             <div>
                                 <p class="gallery-project__category" data-i18n="galleryAttendanceCategory">Vision par ordinateur · RH</p>
@@ -477,7 +501,7 @@
                         </details>
                     </article>
 
-                    <article class="gallery-project project-card">
+                    <article class="gallery-project project-card" hidden>
                         <header class="gallery-project__header">
                             <div>
                                 <p class="gallery-project__category" data-i18n="galleryHrCategory">Développement web · RH</p>
@@ -530,7 +554,7 @@
                         </details>
                     </article>
 
-                    <article class="gallery-project project-card">
+                    <article class="gallery-project project-card" hidden>
                         <header class="gallery-project__header">
                             <div>
                                 <p class="gallery-project__category" data-i18n="galleryFinanceCategory">Développement web · Finance</p>
@@ -572,7 +596,7 @@
                         </details>
                     </article>
 
-                    <article class="gallery-project project-card">
+                    <article class="gallery-project project-card" hidden>
                         <header class="gallery-project__header">
                             <div>
                                 <p class="gallery-project__category" data-i18n="galleryEducationCategory">Développement web · Éducation</p>
@@ -632,6 +656,10 @@
 
 
                     </div>
+                    <button class="projects-show-more" type="button" data-projects-toggle aria-expanded="false" aria-controls="projects-grid">
+                        <span data-i18n="projectsShowMore">Voir plus de projets</span>
+                        <span data-i18n="projectsShowLess" hidden>Voir moins de projets</span>
+                    </button>
                     </div>
 
                 </div>
@@ -928,11 +956,11 @@
                         <p class="education-context__label" data-i18n="educationContextLabelText">En pratique</p>
                         <strong data-i18n="educationContextYears">2022–2026</strong>
                         <p data-i18n="educationContextDescription">Quatre expériences professionnelles et immersions en entreprise, du site industriel à l'ingénierie IA.</p>
-                        <div class="education-context__list">
-                            <span>DataPathology</span>
-                            <span>GlyciOne</span>
-                            <span>RIRAKTECH</span>
-                            <span>Managem</span>
+                        <div class="experience-stack__list">
+                            <li>DataPathology</li>
+                            <li>GlyciOne</li>
+                            <li>RIRAKTECH</li>
+                            <li>Managem</li>
                         </div>
                     </aside>
                 </div>

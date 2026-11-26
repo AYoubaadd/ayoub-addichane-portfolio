@@ -260,8 +260,42 @@ html[data-theme="dark"] #projects .gallery-carousel__button:hover:not(:disabled)
 
 @media (prefers-reduced-motion: reduce) {
   #projects .gallery-project,
-  #projects .gallery-carousel__button {
+  #projects .gallery-carousel__button,
+  #projects .projects-show-more {
     scroll-behavior: auto;
-    transition-duration: 0.01ms;
+    transition: none;
   }
+}
+
+#projects .gallery-grid > .gallery-project[hidden],
+#projects .projects-show-more [hidden],
+#projects .projects-show-more[hidden] {
+  display: none !important;
+}
+
+#projects .projects-show-more {
+  display: flex;
+  min-height: 4.8rem;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto 0;
+  padding: 0 2rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--color-deep);
+  font: 600 1.4rem/1.2 "Instrument Sans", sans-serif;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+#projects .projects-show-more:hover {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+#projects .projects-show-more:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
 }
